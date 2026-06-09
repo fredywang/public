@@ -1,1910 +1,614 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>@font-face { 
-  font-family: "fontawesome-mini";
-  src: url(data:application/octet-stream;base64,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);
-}
-
-[data-theme="dark"] {
-  color-scheme: dark;
-}
-
-[data-theme="light"] {
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  [data-theme="auto"],
-  [data-theme="dark"]
-   {
-    --color-bg: #0d1117;
-    --color-bg-subtle: #161b22;
-    --color-fg:  #e6edf3;
-    --color-link-fg: #2f81f7;
-    --color-border: #30363d;
-    --color-border-muted: #21262d;
-    --color-fg-muted: #848d97;
-    --color-note-fg: #2f81f7;
-    --color-note-emphasis: #1f6feb;
-    --color-tip-fg: #3fb950;
-    --color-tip-emphasis: #238636;
-    --color-warning-fg: #d29922;
-    --color-warning-emphasis: #9e6a03;
-    --color-attention-subtle: rgba(187,128,9,0.15);
-    --color-caution-fg: #f85149;
-    --color-caution-emphasis: #da3633;
-    --color-important-fg: #a371f7;
-    --color-important-emphasis: #8957e5;
-    --color-neutral-muted: rgba(110,118,129,0.4);
-    --color-progress-shadow:  #010101;
-    --color-progress-shadow2: rgba(0, 0, 0, .5);
-    --color-progress-bg: #363c43;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  [data-theme="auto"],
-  [data-theme="light"] {
-    --color-bg:  #ffffff;
-    --color-bg-subtle: #f6f8fa;
-    --color-fg:  #333333;
-    --color-link-fg: #0969da;
-    --color-border: #d0d7de;
-    --color-border-muted: #d8dee4;
-    --color-fg-muted: #656d76;
-    --color-note-fg: #0969da;
-    --color-note-emphasis: #0969da;
-    --color-tip-fg: #1a7f37;
-    --color-tip-emphasis: #1f883d;
-    --color-warning-fg: #9a6700;
-    --color-warning-emphasis: #9a6700;
-    --color-attention-subtle: #fff8c5;
-    --color-caution-fg: #d1242f;
-    --color-caution-emphasis: #cf222e;
-    --color-important-fg: #8250df;
-    --color-important-emphasis: #8250df;
-    --color-neutral-muted: rgba(175,184,193,0.2);
-    --color-progress-shadow:  #fefefe;
-    --color-progress-shadow2: rgba(0, 0, 0, .1);
-    --color-progress-bg:  #efefef;
-  }
-}
-
-body {
-  max-width: 980px;
-  margin: 16px auto;
-  background-color: var(--color-bg);
-}
-
-body .markdown-body
-{
-  padding: 45px;
-}
-
-.markdown-body {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  color: var(--color-fg);
-  overflow: hidden;
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  word-wrap: break-word;
-}
-
-.markdown-body a {
-  background: transparent;
-}
-
-.markdown-body a:active,
-.markdown-body a:hover {
-  outline: 0;
-}
-
-.markdown-body b,
-.markdown-body strong {
-  font-weight: bold;
-}
-
-.markdown-body mark {
-  background: #ff0;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
-}
-
-.markdown-body sub,
-.markdown-body sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-.markdown-body sup {
-  top: -0.5em;
-}
-.markdown-body sub {
-  bottom: -0.25em;
-}
-
-.markdown-body h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-.markdown-body img {
-  border: 0;
-}
-
-.markdown-body hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-
-.markdown-body pre {
-  overflow: auto;
-}
-
-.markdown-body code,
-.markdown-body kbd,
-.markdown-body pre,
-.markdown-body samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-.markdown-body input {
-  color: inherit;
-  font: inherit;
-  margin: 0;
-}
-
-.markdown-body html input[disabled] {
-  cursor: default;
-}
-
-.markdown-body input {
-  line-height: normal;
-}
-
-.markdown-body input[type="checkbox"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-.markdown-body table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.markdown-body td,
-.markdown-body th {
-  padding: 0;
-}
-
-.markdown-body .codehilitetable,
-.markdown-body .highlighttable {
-  border: 0;
-  border-spacing: 0;
-}
-
-.markdown-body .codehilitetable tr,
-.markdown-body .highlighttable {
-  border: 0;
-}
-
-.markdown-body .codehilitetable pre,
-.markdown-body .codehilitetable div.codehilite,
-.markdown-body .highlighttable pre,
-.markdown-body .highlighttable div.highlight {
-  margin: 0;
-}
-
-.markdown-body .linenos,
-.markdown-body .code,
-.markdown-body .codehilitetable td,
-.markdown-body .highlighttable td {
-  border: 0;
-  padding: 0;
-}
-
-.markdown-body td:not(.linenos) .linenodiv {
-  padding: 0 !important;
-}
-
-.markdown-body .code {
-  width: 100%;
-}
-
-.markdown-body .linenos div pre,
-.markdown-body .linenodiv pre,
-.markdown-body .linenodiv {
-  border: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -webkit-border-top-left-radius: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -moz-border-radius-topleft: 3px;
-  -moz-border-radius-bottomleft: 3px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-
-.markdown-body .code div pre,
-.markdown-body .code div {
-  border: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -webkit-border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-.markdown-body * {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.markdown-body input {
-  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-  line-height: 1.4;
-}
-
-.markdown-body a {
-  color: var(--color-link-fg);
-}
-
-.markdown-body hr {
-  height: 0;
-  margin: 15px 0;
-  overflow: hidden;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.markdown-body hr::before,
-.markdown-body hr::after {
-  display: table;
-  content: " ";
-}
-
-.markdown-body hr::after {
-  clear: both;
-}
-
-.markdown-body h1,
-.markdown-body h2,
-.markdown-body h3,
-.markdown-body h4,
-.markdown-body h5,
-.markdown-body h6 {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  line-height: 1.1;
-}
-
-.markdown-body h1 {
-  font-size: 30px;
-}
-
-.markdown-body h2 {
-  font-size: 21px;
-}
-
-.markdown-body h3 {
-  font-size: 16px;
-}
-
-.markdown-body h4 {
-  font-size: 14px;
-}
-
-.markdown-body h5 {
-  font-size: 12px;
-}
-
-.markdown-body h6 {
-  font-size: 11px;
-}
-
-.markdown-body blockquote {
-  margin: 0;
-}
-
-.markdown-body ul,
-.markdown-body ol {
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.markdown-body ol ol,
-.markdown-body ul ol {
-  list-style-type: lower-roman;
-}
-
-.markdown-body ul ul ol,
-.markdown-body ul ol ol,
-.markdown-body ol ul ol,
-.markdown-body ol ol ol {
-  list-style-type: lower-alpha;
-}
-
-.markdown-body dd {
-  margin-left: 0;
-}
-
-.markdown-body code,
-.markdown-body pre,
-.markdown-body samp {
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 12px;
-}
-
-.markdown-body pre {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.markdown-body kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  color: var(--color-fg-default);
-  vertical-align: middle;
-  background-color: var(--color-bg-subtle);
-  border: solid 1px var(--color-neutral-muted);
-  border-bottom-color: var(--color-neutral-muted);
-  border-radius: 6px;
-  box-shadow: inset 0 -1px 0 var(--color-neutral-muted);
-  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
-}
-
-.markdown-body>*:first-child {
-  margin-top: 0 !important;
-}
-
-.markdown-body>*:last-child {
-  margin-bottom: 0 !important;
-}
-
-.markdown-body .headerlink {
-  font: normal normal 16px fontawesome-mini;
-  vertical-align: middle;
-  margin-left: -20px;
-  float: left;
-  display: inline-block;
-  text-decoration: none;
-  opacity: 0;
-  color: var(--color-fg);
-}
-
-.markdown-body .headerlink:focus {
-  outline: none;
-}
-
-.markdown-body h1 .headerlink {
-  margin-top: 0.8rem;
-}
-
-.markdown-body h2 .headerlink,
-.markdown-body h3 .headerlink {
-  margin-top: 0.6rem;
-}
-
-.markdown-body h4 .headerlink {
-  margin-top: 0.2rem;
-}
-
-.markdown-body h5 .headerlink,
-.markdown-body h6 .headerlink {
-  margin-top: 0;
-}
-
-.markdown-body .headerlink:hover,
-.markdown-body h1:hover .headerlink,
-.markdown-body h2:hover .headerlink,
-.markdown-body h3:hover .headerlink,
-.markdown-body h4:hover .headerlink,
-.markdown-body h5:hover .headerlink,
-.markdown-body h6:hover .headerlink {
-  opacity: 1;
-  text-decoration: none;
-}
-
-.markdown-body h1 {
-  padding-bottom: 0.3em;
-  font-size: 2.25em;
-  line-height: 1.2;
-  border-bottom: 1px solid var(--color-border-muted);
-}
-
-.markdown-body h2 {
-  padding-bottom: 0.3em;
-  font-size: 1.75em;
-  line-height: 1.225;
-  border-bottom: 1px solid var(--color-border-muted);
-}
-
-.markdown-body h3 {
-  font-size: 1.5em;
-  line-height: 1.43;
-}
-
-.markdown-body h4 {
-  font-size: 1.25em;
-}
-
-.markdown-body h5 {
-  font-size: 1em;
-}
-
-.markdown-body h6 {
-  font-size: 1em;
-  color: var(--color-fg-muted);
-}
-
-.markdown-body p,
-.markdown-body blockquote,
-.markdown-body ul,
-.markdown-body ol,
-.markdown-body dl,
-.markdown-body table,
-.markdown-body pre,
-.markdown-body .admonition,
-.markdown-body details {
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-
-.markdown-body hr {
-  height: 4px;
-  padding: 0;
-  margin: 16px 0;
-  background-color: var(--color-border);
-  border: 0 none;
-}
-
-.markdown-body ul,
-.markdown-body ol {
-  padding-left: 2em;
-}
-
-.markdown-body ul ul,
-.markdown-body ul ol,
-.markdown-body ol ol,
-.markdown-body ol ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.markdown-body li>p {
-  margin-top: 16px;
-}
-
-.markdown-body dl {
-  padding: 0;
-}
-
-.markdown-body dl dt {
-  padding: 0;
-  margin-top: 16px;
-  font-size: 1em;
-  font-style: italic;
-  font-weight: bold;
-}
-
-.markdown-body dl dd {
-  padding: 0 16px;
-  margin-bottom: 16px;
-}
-
-.markdown-body blockquote {
-  padding: 0 15px;
-  color: var(--color-fg-muted);
-  border-left: 4px solid var(--color-border);
-}
-
-.markdown-body blockquote>:first-child {
-  margin-top: 0;
-}
-
-.markdown-body blockquote>:last-child {
-  margin-bottom: 0;
-}
-
-.markdown-body table {
-  display: block;
-  width: 100%;
-  overflow: auto;
-  word-break: normal;
-  word-break: keep-all;
-}
-
-.markdown-body table th {
-  font-weight: bold;
-}
-
-.markdown-body table th,
-.markdown-body table td {
-  padding: 6px 13px;
-  border: 1px solid var(--color-border-muted);
-}
-
-.markdown-body table tr {
-  border-top: 1px solid var(--color-border-muted);
-}
-
-.markdown-body table tr:nth-child(2n) {
-  background-color: var(--color-bg-subtle);
-}
-
-.markdown-body img {
-  max-width: 100%;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.markdown-body code,
-.markdown-body samp {
-  padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-  margin: 0;
-  font-size: 85%;
-  border-radius: 3px;
-}
-
-.markdown-body :not(pre) > code:not(.highlight):not(.codehilite), .markdown-body samp {
-  background-color: var(--color-bg-subtle);
-}
-
-.markdown-body code::before,
-.markdown-body code::after {
-  letter-spacing: -0.2em;
-  content: "\00a0";
-}
-
-.markdown-body pre>code {
-  padding: 0;
-  margin: 0;
-  font-size: 100%;
-  word-break: normal;
-  white-space: pre;
-  background: transparent;
-  border: 0;
-}
-
-.markdown-body .codehilite,
-.markdown-body .highlight {
-  margin-bottom: 16px;
-}
-
-.markdown-body .codehilite pre,
-.markdown-body .highlight pre,
-.markdown-body pre {
-  padding: 16px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
-}
-
-.markdown-body .codehilite,
-.markdown-body .highlight,
-.markdown-body pre {
-  border-radius: 3px;
-}
-
-.markdown-body :not(.highlight) > pre {
-  background-color: var(--color-bg-subtle);
-}
-
-.markdown-body .codehilite pre,
-.markdown-body .highlight pre {
-  margin-bottom: 0;
-  word-break: normal;
-}
-
-.markdown-body pre {
-  word-wrap: normal;
-}
-
-.markdown-body pre code {
-  display: inline;
-  max-width: initial;
-  padding: 0;
-  margin: 0;
-  overflow: initial;
-  line-height: inherit;
-  word-wrap: normal;
-  background-color: transparent;
-  border: 0;
-}
-
-.markdown-body pre code::before,
-.markdown-body pre code::after {
-  content: normal;
-}
-
-/* Admonition */
-.markdown-body .admonition,
-.markdown-body details[class] {
-  position: relative;
-  border-left: 4px solid var(--color-fg);
-  padding: 10px 10px 10px 10px;
-}
-
-.markdown-body details[class] > summary {
-  list-style: none;
-}
-
-.markdown-body .admonition p {
-  padding: 0;
-}
-
-.markdown-body .admonition > .admonition-title,
-.markdown-body details[class] > summary {
-  position: relative;
-  font-weight: bold;
-  margin: 0;
-  padding-left: 20px;
-}
-
-.markdown-body .admonition-title::before,
-.markdown-body details[class]> summary::before {
-  font: normal normal 16px fontawesome-mini;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  line-height: 1.5;
-  color: var(--color-fg);
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.markdown-body details[class]> summary::after {
-  font: normal normal 16px fontawesome-mini;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  line-height: 1.5;
-  color: var(--color-fg);
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.markdown-body details[class] > summary::after {
-  content:  "\e803";
-}
-
-.markdown-body details[class][open] > summary::after {
-  content:  "\e802";
-}
-
-.markdown-body details[class] > summary::after {
-  color: var(--color-fg);
-}
-
-.markdown-body details.question > summary::after,
-.markdown-body details.important > summary::after,
-.markdown-body details.attention > summary::after {
-  color: var(--color-important-emphasis);
-}
-
-.markdown-body details.warning > summary::after {
-  color: var(--color-warning-emphasis);
-}
-
-.markdown-body details.tip > summary::after,
-.markdown-body details.hint > summary::after {
-  color: var(--color-tip-emphasis);
-}
-
-.markdown-body details.caution > summary::after,
-.markdown-body details.danger > summary::after {
-  color: var(--color-caution-emphasis);
-}
-
-.markdown-body details.note > summary::after {
-  color: var(--color-note-emphasis);
-}
-
-.markdown-body .admonition-title::before,
-.markdown-body details[class] summary::before {
-  content: "\e800\00a0";
-  color: var(--color-fg);
-}
-
-.markdown-body .important > :is(.admonition-title, summary)::before,
-.markdown-body .attention > :is(.admonition-title, summary)::before {
-  content: "\f0f3\00a0";
-  color: var(--color-important-emphasis);
-}
-
-.markdown-body .question > :is(.admonition-title, summary)::before {
-  content: "\e804\00a0";
-  color: var(--color-important-emphasis);
-}
-
-.markdown-body .warning > :is(.admonition-title, summary)::before {
-  content: "\e801\00a0";
-  color: var(--color-warning-emphasis);
-}
-
-.markdown-body .tip > :is(.admonition-title, summary)::before,
-.markdown-body .hint > :is(.admonition-title, summary)::before {
-  content: "\f0eb\00a0";
-  color: var(--color-tip-emphasis);
-}
-
-.markdown-body .caution > :is(.admonition-title, summary)::before,
-.markdown-body .danger > :is(.admonition-title, summary)::before {
-  content: "\e807\00a0";
-  color: var(--color-caution-emphasis);
-}
-
-.markdown-body .note > :is(.admonition-title, summary)::before {
-  content: "\e800\00a0";
-  color: var(--color-note-emphasis);
-}
-
-.markdown-body .admonition > :is(.admonition-title, summary)::after,
-.markdown-body details::after {
-  content: normal;
-}
-
-.markdown-body .question:is(.admonition, details[class]),
-.markdown-body .important:is(.admonition, details[class]),
-.markdown-body .attention:is(.admonition, details[class]) {
-  border-left-color: var(--color-important-emphasis);
-}
-
-.markdown-body .warning:is(.admonition, details[class]) {
-  border-left-color: var(--color-warning-emphasis);
-}
-
-.markdown-body .tip:is(.admonition, details[class]),
-.markdown-body .hint:is(.admonition, details[class]) {
-  border-left-color: var(--color-tip-emphasis);
-}
-
-.markdown-body .caution:is(.admonition, details[class]),
-.markdown-body .danger:is(.admonition, details[class]) {
-  border-left-color: var(--color-caution-emphasis);
-}
-
-.markdown-body .note:is(.admonition, details[class]) {
-  border-left-color: var(--color-note-emphasis);
-}
-
-.markdown-body .admonition>*:first-child,
-.markdown-body details[class]>*:first-child {
-  margin-top: 0 !important;
-}
-
-.markdown-body .admonition>*:last-child,
-.markdown-body details[class]>*:last-child {
-  margin-bottom: 0 !important;
-}
-
-/* progress bar*/
-.markdown-body .progress {
-  display: block;
-  width: 300px;
-  margin: 10px 0;
-  height: 24px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background-color: var(--color-progress-bg);
-  position: relative;
-  box-shadow: inset -1px 1px 3px var(--color-progress-shadow2);
-}
-
-.markdown-body .progress-label {
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  width: 100%; margin: 0;
-  line-height: 24px;
-  color: var(--color-fg);
-  text-shadow: 1px 1px 0 var(--color-progress-shadow), -1px -1px 0 var(--color-progress-shadow), -1px 1px 0 var(--color-progress-shadow),
-               1px -1px 0 var(--color-progress-shadow), 0 1px 0 var(--color-progress-shadow), 0 -1px 0 var(--color-progress-shadow),
-               1px 0 0 var(--color-progress-shadow), -1px 0 0 var(--color-progress-shadow), 1px 1px 2px #000;
-  -webkit-font-smoothing: antialiased !important;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.markdown-body .progress-bar {
-  height: 24px;
-  float: left;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background-color: #96c6d7;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
-  background-size: 30px 30px;
-  background-image: -webkit-linear-gradient(
-    135deg, rgba(255, 255, 255, .4) 27%,
-    transparent 27%,
-    transparent 52%, rgba(255, 255, 255, .4) 52%,
-    rgba(255, 255, 255, .4) 77%,
-    transparent 77%, transparent
-  );
-  background-image: -moz-linear-gradient(
-    135deg,
-    rgba(255, 255, 255, .4) 27%, transparent 27%,
-    transparent 52%, rgba(255, 255, 255, .4) 52%,
-    rgba(255, 255, 255, .4) 77%, transparent 77%,
-    transparent
-  );
-  background-image: -ms-linear-gradient(
-    135deg,
-    rgba(255, 255, 255, .4) 27%, transparent 27%,
-    transparent 52%, rgba(255, 255, 255, .4) 52%,
-    rgba(255, 255, 255, .4) 77%, transparent 77%,
-    transparent
-  );
-  background-image: -o-linear-gradient(
-    135deg,
-    rgba(255, 255, 255, .4) 27%, transparent 27%,
-    transparent 52%, rgba(255, 255, 255, .4) 52%,
-    rgba(255, 255, 255, .4) 77%, transparent 77%,
-    transparent
-  );
-  background-image: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, .4) 27%, transparent 27%,
-    transparent 52%, rgba(255, 255, 255, .4) 52%,
-    rgba(255, 255, 255, .4) 77%, transparent 77%,
-    transparent
-  );
-}
-
-.markdown-body .progress-100plus .progress-bar {
-  background-color: #a6d796;
-}
-
-.markdown-body .progress-80plus .progress-bar {
-  background-color: #c6d796;
-}
-
-.markdown-body .progress-60plus .progress-bar {
-  background-color: #d7c896;
-}
-
-.markdown-body .progress-40plus .progress-bar {
-  background-color: #d7a796;
-}
-
-.markdown-body .progress-20plus .progress-bar {
-  background-color: #d796a6;
-}
-
-.markdown-body .progress-0plus .progress-bar {
-  background-color: #c25f77;
-}
-
-.markdown-body .candystripe-animate .progress-bar{
-  -webkit-animation: animate-stripes 3s linear infinite;
-  -moz-animation: animate-stripes 3s linear infinite;
-  animation: animate-stripes 3s linear infinite;
-}
-
-@-webkit-keyframes animate-stripes {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 60px 0;
-  }
-}
-
-@-moz-keyframes animate-stripes {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 60px 0;
-  }
-}
-
-@keyframes animate-stripes {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 60px 0;
-  }
-}
-
-.markdown-body .gloss .progress-bar {
-  box-shadow:
-    inset 0 4px 12px rgba(255, 255, 255, .7),
-    inset 0 -12px 0 rgba(0, 0, 0, .05);
-}
-
-/* MultiMarkdown Critic Blocks */
-.markdown-body .critic_mark {
-  background: #ff0;
-}
-
-.markdown-body .critic_delete {
-  color: var(--color-caution-emphasis);
-  text-decoration: line-through;
-}
-
-.markdown-body .critic_insert {
-  color: var(--color-tip-emphasis) ;
-  text-decoration: underline;
-}
-
-.markdown-body .critic_comment {
-  color: var(--color-fg-muted);
-  font-style: italic;
-}
-
-.markdown-body .headeranchor {
-  font: normal normal 16px fontawesome-mini;
-  line-height: 1;
-  display: inline-block;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.markdown-body .task-list-item {
-  list-style-type: none;
-}
-
-.markdown-body .task-list-item+.task-list-item {
-  margin-top: 3px;
-}
-
-.markdown-body .task-list-item input {
-  margin: 0 4px 0.25em -20px;
-  vertical-align: middle;
-}
-
-.markdown-body diagram-div, .markdown-body div.uml-sequence-diagram, .markdown-body, div.uml-flowchart {
-  overflow: auto;
-}
-
-.markdown-body diagram-div, .markdown-body div.uml-sequence-diagram, div.uml-flowchart {
-  background-color: #ffffff;
-}
-
-/* Media */
-@media only screen and (min-width: 480px) {
-  .markdown-body {
-    font-size:14px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .markdown-body {
-    font-size:16px;
-  }
-}
-
-@media print {
-  .markdown-body * {
-    background: transparent !important;
-    color: black !important;
-    filter:none !important;
-    -ms-filter: none !important;
-  }
-
-  .markdown-body {
-    font-size:12pt;
-    max-width:100%;
-    outline:none;
-    border: 0;
-  }
-
-  .markdown-body .headeranchor-link {
-    display: none;
-  }
-
-  .markdown-body a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  .markdown-body abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  .markdown-body .ir a::after,
-  .markdown-body a[href^="javascript:"]::after,
-  .markdown-body a[href^="#"]::after {
-    content: "";
-  }
-
-  .markdown-body pre {
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-
-  .markdown-body pre,
-  .markdown-body blockquote {
-    padding-right: 1em;
-    page-break-inside: avoid;
-  }
-
-  .markdown-body .progress,
-  .markdown-body .progress-bar {
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-
-  .markdown-body .progress {
-    border: 1px solid #ddd;
-  }
-
-  .markdown-body .progress-bar {
-    height: 22px;
-    border-right: 1px solid #ddd;
-  }
-
-  .markdown-body tr,
-  .markdown-body img {
-    page-break-inside: avoid;
-  }
-
-  .markdown-body img {
-    max-width: 100% !important;
-  }
-
-  .markdown-body p,
-  .markdown-body h2,
-  .markdown-body h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  .markdown-body h2,
-  .markdown-body h3 {
-    page-break-after: avoid;
-  }
-}
-</style><style>/* GitHub Dark from Pygments with lighter background */
-@media (prefers-color-scheme: dark) {
-  body,
-  [data-theme="dark"] {
-  	.highlight {background-color:#161b22; color:#F8F8F2;}
-		.highlight .hll { background-color: #6e7681 }
-		.highlight .c { color: #8B949E; font-style: italic }
-		.highlight .err { color: #F85149 }
-		.highlight .esc { color: #E6EDF3 }
-		.highlight .g { color: #E6EDF3 }
-		.highlight .k { color: #FF7B72 }
-		.highlight .l { color: #A5D6FF }
-		.highlight .n { color: #E6EDF3 }
-		.highlight .o { color: #FF7B72; font-weight: bold }
-		.highlight .x { color: #E6EDF3 }
-		.highlight .p { color: #E6EDF3 }
-		.highlight .ch { color: #8B949E; font-style: italic }
-		.highlight .cm { color: #8B949E; font-style: italic }
-		.highlight .cp { color: #8B949E; font-weight: bold; font-style: italic }
-		.highlight .cpf { color: #8B949E; font-style: italic }
-		.highlight .c1 { color: #8B949E; font-style: italic }
-		.highlight .cs { color: #8B949E; font-weight: bold; font-style: italic }
-		.highlight .gd { color: #FFA198; background-color: #490202 }
-		.highlight .ge { color: #E6EDF3; font-style: italic }
-		.highlight .ges { color: #E6EDF3; font-weight: bold; font-style: italic }
-		.highlight .gr { color: #FFA198 }
-		.highlight .gh { color: #79C0FF; font-weight: bold }
-		.highlight .gi { color: #56D364; background-color: #0F5323 }
-		.highlight .go { color: #8B949E }
-		.highlight .gp { color: #8B949E }
-		.highlight .gs { color: #E6EDF3; font-weight: bold }
-		.highlight .gu { color: #79C0FF }
-		.highlight .gt { color: #FF7B72 }
-		.highlight .g-Underline { color: #E6EDF3; text-decoration: underline }
-		.highlight .kc { color: #79C0FF }
-		.highlight .kd { color: #FF7B72 }
-		.highlight .kn { color: #FF7B72 }
-		.highlight .kp { color: #79C0FF }
-		.highlight .kr { color: #FF7B72 }
-		.highlight .kt { color: #FF7B72 }
-		.highlight .ld { color: #79C0FF }
-		.highlight .m { color: #A5D6FF }
-		.highlight .s { color: #A5D6FF }
-		.highlight .na { color: #E6EDF3 }
-		.highlight .nb { color: #E6EDF3 }
-		.highlight .nc { color: #F0883E; font-weight: bold }
-		.highlight .no { color: #79C0FF; font-weight: bold }
-		.highlight .nd { color: #D2A8FF; font-weight: bold }
-		.highlight .ni { color: #FFA657 }
-		.highlight .ne { color: #F0883E; font-weight: bold }
-		.highlight .nf { color: #D2A8FF; font-weight: bold }
-		.highlight .nl { color: #79C0FF; font-weight: bold }
-		.highlight .nn { color: #FF7B72 }
-		.highlight .nx { color: #E6EDF3 }
-		.highlight .py { color: #79C0FF }
-		.highlight .nt { color: #7EE787 }
-		.highlight .nv { color: #79C0FF }
-		.highlight .ow { color: #FF7B72; font-weight: bold }
-		.highlight .pm { color: #E6EDF3 }
-		.highlight .w { color: #6E7681 }
-		.highlight .mb { color: #A5D6FF }
-		.highlight .mf { color: #A5D6FF }
-		.highlight .mh { color: #A5D6FF }
-		.highlight .mi { color: #A5D6FF }
-		.highlight .mo { color: #A5D6FF }
-		.highlight .sa { color: #79C0FF }
-		.highlight .sb { color: #A5D6FF }
-		.highlight .sc { color: #A5D6FF }
-		.highlight .dl { color: #79C0FF }
-		.highlight .sd { color: #A5D6FF }
-		.highlight .s2 { color: #A5D6FF }
-		.highlight .se { color: #79C0FF }
-		.highlight .sh { color: #79C0FF }
-		.highlight .si { color: #A5D6FF }
-		.highlight .sx { color: #A5D6FF }
-		.highlight .sr { color: #79C0FF }
-		.highlight .s1 { color: #A5D6FF }
-		.highlight .ss { color: #A5D6FF }
-		.highlight .bp { color: #E6EDF3 }
-		.highlight .fm { color: #D2A8FF; font-weight: bold }
-		.highlight .vc { color: #79C0FF }
-		.highlight .vg { color: #79C0FF }
-		.highlight .vi { color: #79C0FF }
-		.highlight .vm { color: #79C0FF }
-		.highlight .il { color: #A5D6FF }
-  }
-}
-
-/* Taken from `github.css` */
-@media (prefers-color-scheme: light) {
-  body,
-  [data-theme="light"] {
-  	.highlight {background-color:#f7f7f7;color:#333333;}
-		.highlight .hll {background-color:#ffffcc;}
-		.highlight .c{color:#999988;font-style:italic}
-		.highlight .err{color:#a61717;background-color:#e3d2d2}
-		.highlight .k{font-weight:bold}
-		.highlight .o{font-weight:bold}
-		.highlight .cm{color:#999988;font-style:italic}
-		.highlight .cp{color:#999999;font-weight:bold}
-		.highlight .c1{color:#999988;font-style:italic}
-		.highlight .cs{color:#999999;font-weight:bold;font-style:italic}
-		.highlight .gd{color:#000000;background-color:#ffdddd}
-		.highlight .ge{font-style:italic}
-		.highlight .gr{color:#aa0000}
-		.highlight .gh{color:#999999}
-		.highlight .gi{color:#000000;background-color:#ddffdd}
-		.highlight .go{color:#888888}
-		.highlight .gp{color:#555555}
-		.highlight .gs{font-weight:bold}
-		.highlight .gu{color:#800080;font-weight:bold}
-		.highlight .gt{color:#aa0000}
-		.highlight .kc{font-weight:bold}
-		.highlight .kd{font-weight:bold}
-		.highlight .kn{font-weight:bold}
-		.highlight .kp{font-weight:bold}
-		.highlight .kr{font-weight:bold}
-		.highlight .kt{color:#445588;font-weight:bold}
-		.highlight .m{color:#009999}
-		.highlight .s{color:#dd1144}
-		.highlight .n{color:#333333}
-		.highlight .na{color:teal}
-		.highlight .nb{color:#0086b3}
-		.highlight .nc{color:#445588;font-weight:bold}
-		.highlight .no{color:teal}
-		.highlight .ni{color:purple}
-		.highlight .ne{color:#990000;font-weight:bold}
-		.highlight .nf{color:#990000;font-weight:bold}
-		.highlight .nn{color:#555555}
-		.highlight .nt{color:navy}
-		.highlight .nv{color:teal}
-		.highlight .ow{font-weight:bold}
-		.highlight .w{color:#bbbbbb}
-		.highlight .mf{color:#009999}
-		.highlight .mh{color:#009999}
-		.highlight .mi{color:#009999}
-		.highlight .mo{color:#009999}
-		.highlight .sb{color:#dd1144}
-		.highlight .sc{color:#dd1144}
-		.highlight .sd{color:#dd1144}
-		.highlight .s2{color:#dd1144}
-		.highlight .se{color:#dd1144}
-		.highlight .sh{color:#dd1144}
-		.highlight .si{color:#dd1144}
-		.highlight .sx{color:#dd1144}
-		.highlight .sr{color:#009926}
-		.highlight .s1{color:#dd1144}
-		.highlight .ss{color:#990073}
-		.highlight .bp{color:#999999}
-		.highlight .vc{color:teal}
-		.highlight .vg{color:teal}
-		.highlight .vi{color:teal}
-		.highlight .il{color:#009999}
-		.highlight .gc{color:#999;background-color:#EAF2F5}
-  }
-}
-</style><title># 6/24 - 7/2 關西山海湖自駕大環線詳細行程表 (2026-05-16 22:30)</title></head><body data-theme="auto"><article class="markdown-body"><h1 id="624-72">6/24 - 7/2 關西山海湖自駕大環線詳細行程表 (2026-05-16 22:30)<a class="headerlink" href="#624-72" title="Permanent link"></a></h1>
-<h2 id="_1">📌 行程總覽與核心住宿<a class="headerlink" href="#_1" title="Permanent link"></a></h2>
-<ul>
-<li><strong>Day 1 - Day 2 (6/24 - 6/25)</strong>：淡路島 🏨 TOTO Seawind Awaji（安藤忠雄清水模幾何美學建築）</li>
-<li><strong>Day 3 - Day 4 (6/26 - 6/27)</strong>：京都伊根 🏨 KURASHI INE OHARA（獨棟古民家包棟民宿，附設戶外木桶三溫暖與浴池）</li>
-<li><strong>Day 5 - Day 6 (6/28 - 6/29)</strong>：琵琶湖 🏨 琵琶湖大津王子大飯店（全房型直面全日最大琵琶湖）</li>
-<li><strong>Day 7 - Day 8 (6/30 - 7/01)</strong>：大阪關空 🏨 OMO 關西機場 by 星野集團（免開車放空、星野質感旅宿）</li>
-</ul>
-<hr />
-<h2 id="_2">📅 每日詳細自駕行程表<a class="headerlink" href="#_2" title="Permanent link"></a></h2>
-<h3 id="day-1624-toto-seawind">🚗 Day 1：6/24 (星期三) | 關空取車 ➔ 暢遊淡路島 ➔ 入住 TOTO Seawind<a class="headerlink" href="#day-1624-toto-seawind" title="Permanent link"></a></h3>
-<ul>
-<li><strong>今日路線</strong>：關西機場 ➔ 道の駅 あわじ ➔ 本福寺水御堂 ➔ 淡路夢舞台 ➔ 永旺淡路店 ➔ 🏨 TOTO Seawind Awaji</li>
-<li><strong>今日總里程</strong>：約 98 公里</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left">時間</th>
-<th align="left">行程 / 景點 / 行動</th>
-<th align="left">里程/車程</th>
-<th align="left">停留上限</th>
-<th align="left">💡 自駕、休息與飯店筆記</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">10:10-11:30</td>
-<td align="left"><strong>關西機場取車</strong></td>
-<td align="left">-</td>
-<td align="left">80分</td>
-<td align="left">辦理租車手續，務必確認租借 <strong>ETC卡</strong> 與 <strong>全險(NOC)</strong>。</td>
-</tr>
-<tr>
-<td align="left">11:30-12:30</td>
-<td align="left">關空 ➔ 道の駅 あわじ</td>
-<td align="left">70 km / 60分</td>
-<td align="left">-</td>
-<td align="left">經阪神高速灣岸線與明石海峽大橋，跨海風景壯麗。</td>
-</tr>
-<tr>
-<td align="left">12:30-13:45</td>
-<td align="left"><strong>道の駅 あわじ (午餐)</strong></td>
-<td align="left">-</td>
-<td align="left">75分</td>
-<td align="left">下車放鬆。可在此眺望明石海峽大橋，享用生銀魚丼。</td>
-</tr>
-<tr>
-<td align="left">13:45-14:00</td>
-<td align="left">道の駅 ➔ 本福寺水御堂</td>
-<td align="left">8 km / 15分</td>
-<td align="left">-</td>
-<td align="left">沿島內東岸公路駕駛。</td>
-</tr>
-<tr>
-<td align="left">14:00-15:00</td>
-<td align="left"><strong>本福寺 水御堂</strong></td>
-<td align="left">-</td>
-<td align="left">60分</td>
-<td align="left">安藤忠雄大師經典作品，隱沒在蓮花池底的紅色佛堂。</td>
-</tr>
-<tr>
-<td align="left">15:00-15:10</td>
-<td align="left">本福寺 ➔ 淡路夢舞台</td>
-<td align="left">4 km / 10分</td>
-<td align="left">-</td>
-<td align="left">輕鬆短途駕駛。</td>
-</tr>
-<tr>
-<td align="left">15:10-16:40</td>
-<td align="left"><strong>淡路夢舞台</strong></td>
-<td align="left">-</td>
-<td align="left">90分</td>
-<td align="left">依山面海的清水模幾何建築群，大師代表作之一。</td>
-</tr>
-<tr>
-<td align="left">16:40-17:00</td>
-<td align="left">淡路夢舞台 ➔ 超市</td>
-<td align="left">13 km / 20分</td>
-<td align="left">-</td>
-<td align="left">前往東浦市區準備晚餐。</td>
-</tr>
-<tr>
-<td align="left">17:00-17:40</td>
-<td align="left"><strong>🛒 永旺淡路店</strong></td>
-<td align="left">-</td>
-<td align="left">40分</td>
-<td align="left"><strong>精準補貨</strong>：買齊淡路和牛、鮮蔬。</td>
-</tr>
-<tr>
-<td align="left">17:40-17:45</td>
-<td align="left">超市 ➔ 飯店</td>
-<td align="left">3 km / 5分</td>
-<td align="left">-</td>
-<td align="left">極近距離，輕鬆駕駛。</td>
-</tr>
-<tr>
-<td align="left">17:45~</td>
-<td align="left"><strong>🏨 TOTO Seawind Awaji</strong></td>
-<td align="left">-</td>
-<td align="left">-</td>
-<td align="left"><strong>入住 Check-in (連住 1/2)</strong><br>安藤忠雄大師利用斜坡設計的清水模海景旅店。</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>🌍 當日氣候、氣溫與日出日落（淡路島區域）</strong></li>
-<li><strong>日出/日落</strong>：日出 04:47 / 日落 19:15</li>
-<li><strong>均溫範圍</strong>：22°C - 28°C</li>
-<li><strong>往年氣候</strong>：關西此時正值梅雨季末期，多雲時晴，偶有短暫陣雨。海邊風大，體感舒適，傍晚後稍有涼意。</li>
-<li><strong>🍇 當地專屬活動與限定物產</strong></li>
-<li><strong>限定物產</strong>：淡路島新洋蔥（極甜生吃不辣）、淡路島和牛（油脂豐厚適合煎烤）、明石海峽生銀魚（しらす）。</li>
-<li><strong>在地活動</strong>：淡路夢舞台初夏綠意繡球花季（尾聲）。</li>
-</ul>
-<hr />
-<h3 id="day-2625-sunset-line-toto">🚗 Day 2：6/25 (星期四) | 飯店出發 ➔ 鳴門大橋 ➔ 西海岸 Sunset Line ➔ 返回 TOTO<a class="headerlink" href="#day-2625-sunset-line-toto" title="Permanent link"></a></h3>
-<ul>
-<li><strong>今日路線</strong>：🏨 TOTO 旅店 ➔ 門崎展望台 ➔ 道の駅 うずしお ➔ 多賀の浜 海水浴場 ➔ 永旺淡路店 ➔ 🏨 TOTO 旅店</li>
-<li><strong>今日總里程</strong>：約 95 公里</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left">時間</th>
-<th align="left">行程 / 景點 / 行動</th>
-<th align="left">里程/車程</th>
-<th align="left">停留上限</th>
-<th align="left">💡 自駕、休息與飯店筆記</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">09:30-10:20</td>
-<td align="left">飯店 ➔ 鳴門大橋觀景台</td>
-<td align="left">45 km / 50分</td>
-<td align="left">-</td>
-<td align="left">走淡路島縱貫自動車道南下。</td>
-</tr>
-<tr>
-<td align="left">10:15-11:15</td>
-<td align="left"><strong>門崎展望台 (鳴門渦潮)</strong></td>
-<td align="left">-</td>
-<td align="left">60分</td>
-<td align="left">遠眺大鳴門橋與世界三大漩渦之一的鳴門渦潮。</td>
-</tr>
-<tr>
-<td align="left">11:15-11:45</td>
-<td align="left">展望台 ➔ 道の駅 うずしお</td>
-<td align="left">5 km / 10分</td>
-<td align="left">-</td>
-<td align="left">沿山路慢行。</td>
-</tr>
-<tr>
-<td align="left">11:45-13:15</td>
-<td align="left"><strong>道の駅 うずしお (午餐)</strong></td>
-<td align="left">-</td>
-<td align="left">90分</td>
-<td align="left">下車休息。品嚐連奪日本冠軍的淡路島洋蔥牛肉漢堡。</td>
-</tr>
-<tr>
-<td align="left">13:15-14:15</td>
-<td align="left">道の駅 ➔ 淡路島西海岸</td>
-<td align="left">35 km / 50分</td>
-<td align="left">-</td>
-<td align="left">走 <strong>淡路 Sunset Line (國道31號)</strong> 海岸線公路。</td>
-</tr>
-<tr>
-<td align="left">14:15-15:45</td>
-<td align="left"><strong>多賀の浜 海水浴場散策</strong></td>
-<td align="left">-</td>
-<td align="left">90分</td>
-<td align="left">寧靜的瀨戶內海沙灘，遠遠離都市喧囂。</td>
-</tr>
-<tr>
-<td align="left">15:45-16:00</td>
-<td align="left">海水浴場 ➔ 超市</td>
-<td align="left">5 km / 15分</td>
-<td align="left">-</td>
-<td align="left">沿海岸線輕鬆開車。</td>
-</tr>
-<tr>
-<td align="left">16:00-16:40</td>
-<td align="left"><strong>🛒 永旺淡路店</strong></td>
-<td align="left">-</td>
-<td align="left">40分</td>
-<td align="left"><strong>精準補貨</strong>：買齊淡路和牛、鮮蔬。</td>
-</tr>
-<tr>
-<td align="left">16:40-16:55</td>
-<td align="left">超市 ➔ 飯店</td>
-<td align="left">5 km / 15分</td>
-<td align="left">-</td>
-<td align="left">輕鬆返回旅店。</td>
-</tr>
-<tr>
-<td align="left">17:00~</td>
-<td align="left"><strong>🏨 TOTO Seawind Awaji</strong></td>
-<td align="left">-</td>
-<td align="left">-</td>
-<td align="left"><strong>續住 (連住 2/2)</strong><br>傍晚在旅店露臺欣賞瀨戶內海落日。</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>🌍 當日氣候、氣溫與日出日落（淡路島南端至西海岸）</strong></li>
-<li><strong>日出/日落</strong>：日出 04:47 / 日落 19:15</li>
-<li><strong>均溫範圍</strong>：22°C - 29°C</li>
-<li><strong>往年氣候</strong>：西海岸（Sunset Line）多雲偶見晴天，若雲層未過厚，可在多賀の浜欣賞極美的瀨戶內海夕陽。</li>
-<li><strong>🍇 當地專屬活動與限定物產</strong></li>
-<li><strong>限定物產</strong>：淡路島章魚（初夏肉質最Q彈）、淡路島牛奶與章魚仙貝。</li>
-<li><strong>特別提醒</strong>：今日鳴門渦潮大潮時間需提前上網核對，以便在門崎展望台看到最壯觀的漩渦。</li>
-</ul>
-<hr />
-<h3 id="day-3626">🚗 Day 3：6/26 (星期五) | 淡路島退房 ➔ 三十三間堂買線香 ➔ 入住伊根古民家民宿<a class="headerlink" href="#day-3626" title="Permanent link"></a></h3>
-<ul>
-<li><strong>今日路線</strong>：🏨 TOTO 旅店 ➔ 三十三間堂 ➔ 道の駅 京丹波 ➔ Nishigaki Yoro ➔ 🏨 KURASHI INE OHARA</li>
-<li><strong>今日總里程</strong>：約 212 公里 (長途移動日，動線完全避開市區塞車)</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left">時間</th>
-<th align="left">行程 / 景點 / 行動</th>
-<th align="left">里程/車程</th>
-<th align="left">停留上限</th>
-<th align="left">💡 自駕、休息與飯店筆記</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">08:30-10:10</td>
-<td align="left">飯店退房 ➔ 京都東山區</td>
-<td align="left">110 km / 100分</td>
-<td align="left">-</td>
-<td align="left">過明石大橋後走神戶線接名神高速。</td>
-</tr>
-<tr>
-<td align="left">10:10-11:30</td>
-<td align="left"><strong>三十三間堂 (🎯 線香採購)</strong></td>
-<td align="left">-</td>
-<td align="left">80分</td>
-<td align="left"><strong>車停廟方大停車場（買完即走避開市區塞車）</strong>。購入特製線香，參觀千手觀音像。</td>
-</tr>
-<tr>
-<td align="left">11:30-12:45</td>
-<td align="left"><strong>京都東山區 (精緻午餐)</strong></td>
-<td align="left">-</td>
-<td align="left">75分</td>
-<td align="left">在三十三間堂周邊享用京都湯豆腐或精緻割烹。</td>
-</tr>
-<tr>
-<td align="left">12:45-14:05</td>
-<td align="left">京都 ➔ 道の駅 京丹波 味夢の里</td>
-<td align="left">55 km / 80分</td>
-<td align="left">-</td>
-<td align="left">走京都縱貫自動車道往北京都前進。</td>
-</tr>
-<tr>
-<td align="left">14:05-14:30</td>
-<td align="left"><strong>道の駅 京丹波 (重要休息)</strong></td>
-<td align="left">-</td>
-<td align="left">25分</td>
-<td align="left"><strong>下車放鬆 15 分鐘</strong>。此站為大型五星級休息站。</td>
-</tr>
-<tr>
-<td align="left">14:30-15:25</td>
-<td align="left">休息站 ➔ 北京都生鮮超市</td>
-<td align="left">38 km / 55分</td>
-<td align="left">-</td>
-<td align="left">穿過山區，前往進入伊根順路的養老地區（Yoro）超市。</td>
-</tr>
-<tr>
-<td align="left">15:25-16:05</td>
-<td align="left"><strong>🛒 Nishigaki Yoro</strong></td>
-<td align="left">-</td>
-<td align="left">30分</td>
-<td align="left"><strong>精準補貨</strong>：回程極順路的大型生鮮超市，補給晚間的水果與地酒。</td>
-</tr>
-<tr>
-<td align="left">16:05-16:25</td>
-<td align="left">超市 ➔ 伊根大原民宿</td>
-<td align="left">14 km / 20分</td>
-<td align="left">-</td>
-<td align="left">沿著海岸線慢行進入大原地區。</td>
-</tr>
-<tr>
-<td align="left">16:20~</td>
-<td align="left"><strong>🏨 KURASHI INE OHARA</strong></td>
-<td align="left">-</td>
-<td align="left">-</td>
-<td align="left"><strong>入住 Check-in (連住 1/2)</strong><br>妥善放好珍貴線香。享受獨棟古民家空間與戶外木桶三溫暖。</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>🌍 當日氣候、氣溫與日出日落（京都山區至丹後伊根）</strong></li>
-<li><strong>日出/日落</strong>：日出 04:44 / 日落 19:21（伊根緯度稍高，日落較晚）</li>
-<li><strong>均溫範圍</strong>：20°C - 27°C（伊根海邊體感溫度受海風影響會比京都京都市區低2-3度）</li>
-<li><strong>往年氣候</strong>：京丹波與丹後山區易有局部的地形霧與短暫午後雷陣雨，開山路時需注意路面濕滑。抵達伊根海邊後空氣清透。</li>
-<li><strong>🍇 當地專屬活動與限定物產</strong></li>
-<li><strong>限定物產</strong>：京丹波黑豆製品（大黑豆冰淇淋）、丹後長筒生牡蠣（岩牡蠣，初夏正是最肥美季節）、伊根地魚。</li>
-</ul>
-<hr />
-<h3 id="day-4627">🚗 Day 4：6/27 (星期六) | 民宿出發 ➔ 天橋立飛龍觀 ➔ 伊根舟屋慢活 ➔ 返回民宿<a class="headerlink" href="#day-4627" title="Permanent link"></a></h3>
-<ul>
-<li><strong>今日路線</strong>：🏨 KURASHI 民宿 ➔ 天橋立 View Land ➔ 伊根舟屋群 ➔ 道の駅 伊根 ➔ Nishigaki Yoro ➔ 🏨 KURASHI 民宿</li>
-<li><strong>今日總里程</strong>：約 50 公里 (極為輕鬆的在地慢活日)</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left">時間</th>
-<th align="left">行程 / 景點 / 行動</th>
-<th align="left">里程/車程</th>
-<th align="left">停留上限</th>
-<th align="left">💡 自駕、休息與飯店筆記</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">09:15-09:45</td>
-<td align="left">民宿出發 ➔ 天橋立</td>
-<td align="left">17 km / 30分</td>
-<td align="left">-</td>
-<td align="left">民宿出發南下，前往天橋立車站後方停車場。</td>
-</tr>
-<tr>
-<td align="left">09:45-11:45</td>
-<td align="left"><strong>天橋立 View Land (飛龍觀)</strong></td>
-<td align="left">-</td>
-<td align="left">120分</td>
-<td align="left">搭乘單軌電車上山，體驗經典的倒過來看沙洲如飛龍在天。</td>
-</tr>
-<tr>
-<td align="left">11:45-12:15</td>
-<td align="left">天橋立 ➔ 伊根舟屋</td>
-<td align="left">22 km / 30分</td>
-<td align="left">-</td>
-<td align="left">沿著 <strong>國道178號</strong> 駕駛，欣賞日本海海岸。</td>
-</tr>
-<tr>
-<td align="left">12:15-14:15</td>
-<td align="left"><strong>伊根舟屋群散策 (含海上計程車)</strong></td>
-<td align="left">-</td>
-<td align="left">120分</td>
-<td align="left">推薦搭乘海上計程車（舟屋屋形船），從海面上欣賞傳統水上建築。</td>
-</tr>
-<tr>
-<td align="left">14:15-14:20</td>
-<td align="left">伊根舟屋 ➔ 道の駅 舟屋の里伊根</td>
-<td align="left">1 km / 5分</td>
-<td align="left">-</td>
-<td align="left">往山坡上開，路幅較窄。</td>
-</tr>
-<tr>
-<td align="left">14:20-15:40</td>
-<td align="left"><strong>道の駅 舟屋幻想午餐)</strong></td>
-<td align="left">-</td>
-<td align="left">80分</td>
-<td align="left">位於高處飽覽伊根灣。午餐推薦享用在地海鮮。</td>
-</tr>
-<tr>
-<td align="left">15:40-16:05</td>
-<td align="left">道之驛 ➔ 超市</td>
-<td align="left">15 km / 25分</td>
-<td align="left">-</td>
-<td align="left">順路開往與謝野町/養老方向的大型超市。</td>
-</tr>
-<tr>
-<td align="left">16:05-16:35</td>
-<td align="left"><strong>🛒 Nishigaki Yoro</strong></td>
-<td align="left">-</td>
-<td align="left">30分</td>
-<td align="left"><strong>精準補貨</strong>：回程極順路的大型生鮮超市，補給晚間的水果與地酒。</td>
-</tr>
-<tr>
-<td align="left">16:35-16:50</td>
-<td align="left">超市 ➔ 民宿</td>
-<td align="left">13 km / 15分</td>
-<td align="left">-</td>
-<td align="left">輕鬆開回大原地區的古民家民宿。</td>
-</tr>
-<tr>
-<td align="left">17:00~</td>
-<td align="left"><strong>🏨 KURASHI INE OHARA</strong></td>
-<td align="left">-</td>
-<td align="left">-</td>
-<td align="left"><strong>續住 (連住 2/2)</strong><br>利用民宿廚房自行料理在地晚餐，再次享受戶外木桶浴池。</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>🌍 當日氣候、氣溫與日出日落（天橋立及伊根灣區）</strong></li>
-<li><strong>日出/日落</strong>：日出 04:45 / 日落 19:21</li>
-<li><strong>均溫範圍</strong>：21°C - 28°C</li>
-<li><strong>往年氣候</strong>：日本海側清晨常有薄霧，上午隨太陽升起消散，轉為晴天或多雲。伊根灣因地形封閉，海面如鏡，非常適合搭船。</li>
-<li><strong>🍇 當地專屬活動與限定物產</strong></li>
-<li><strong>限定物產</strong>：向井酒造的「伊根滿開」（古老赤米釀造的粉紅色清酒，帶甜酸水果香，極適合佐餐）、宮津竹筴魚。</li>
-</ul>
-<hr />
-<h3 id="day-5628">🚗 Day 5：6/28 (星期日) | 民宿退房 ➔ 舞鶴深度順遊 ➔ 入住琵琶湖大津王子<a class="headerlink" href="#day-5628" title="Permanent link"></a></h3>
-<ul>
-<li><strong>今日路線</strong>：🏨 KURASHI 民宿 ➔ 舞鶴海鮮市場 ➔ 五老天空塔 ➔ 紅磚公園 ➔ 道の駅 若狹おばま ➔ Valor 大津店 ➔ 🏨 大津王子大飯店</li>
-<li><strong>今日總里程</strong>：約 150 公里</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left">時間</th>
-<th align="left">行程 / 景點 / 行動</th>
-<th align="left">里程/車程</th>
-<th align="left">停留上限</th>
-<th align="left">💡 自駕、休息與飯店筆記</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">08:45-09:45</td>
-<td align="left">民宿退房 ➔ 舞鶴港海鮮市場</td>
-<td align="left">40 km / 60分</td>
-<td align="left">-</td>
-<td align="left">悠閒退房後，沿國道178/175號前進。</td>
-</tr>
-<tr>
-<td align="left">09:45-11:15</td>
-<td align="left"><strong>舞鶴港海鮮市場 (早午餐)</strong></td>
-<td align="left">-</td>
-<td align="left">90分</td>
-<td align="left"><strong>下車徹底休息 15 分鐘</strong>。大啖現烤岩生蠔、海鮮丼。</td>
-</tr>
-<tr>
-<td align="left">11:15-11:30</td>
-<td align="left">海鮮市場 ➔ 五老天空塔</td>
-<td align="left">7 km / 15分</td>
-<td align="left">-</td>
-<td align="left">盤山公路向上，注意車速。</td>
-</tr>
-<tr>
-<td align="left">11:30-12:30</td>
-<td align="left"><strong>五老天空塔 (近畿百景)</strong></td>
-<td align="left">-</td>
-<td align="left">60分</td>
-<td align="left">登上塔頂飽覽剛硬壯闊的舞鶴灣海景。</td>
-</tr>
-<tr>
-<td align="left">12:30-12:45</td>
-<td align="left">五老天空塔 ➔ 舞鶴紅磚公園</td>
-<td align="left">5 km / 15分</td>
-<td align="left">-</td>
-<td align="left">開往舊海軍紅磚倉庫區。</td>
-</tr>
-<tr>
-<td align="left">12:45-14:15</td>
-<td align="left"><strong>舞鶴紅磚公園 (歷史散策)</strong></td>
-<td align="left">-</td>
-<td align="left">90分</td>
-<td align="left">漫步於明治時期的紅磚建築中，極具歷史厚重感。</td>
-</tr>
-<tr>
-<td align="left">14:15-16:00</td>
-<td align="left">舞鶴啟程 ➔ 大津市區超市</td>
-<td align="left">80 km / 105分</td>
-<td align="left">-</td>
-<td align="left"><strong>中途休息：</strong> 開車約 45 分鐘會經過<strong>「道の駅 若狹おばま」</strong>，請務必<strong>下車放鬆 15 分鐘</strong>再出發。</td>
-</tr>
-<tr>
-<td align="left">16:00-16:45</td>
-<td align="left"><strong>🛒 Valor 大津店</strong></td>
-<td align="left">-</td>
-<td align="left">45分</td>
-<td align="left"><strong>精準補貨</strong>：位於大津王子大飯店旁，におの浜的大型連鎖超市，採購滋賀特產與宵夜。</td>
-</tr>
-<tr>
-<td align="left">16:45-16:50</td>
-<td align="left">超市 ➔ 飯店</td>
-<td align="left">1 km / 5分</td>
-<td align="left">-</td>
-<td align="left">轉個彎即抵達飯店。</td>
-</tr>
-<tr>
-<td align="left">17:00~</td>
-<td align="left"><strong>🏨 琵琶湖大津王子大飯店</strong></td>
-<td align="left">-</td>
-<td align="left">-</td>
-<td align="left"><strong>入住 Check-in (連住 1/2)</strong><br>入住大津地標，所有客房均面向全日本最大的琵琶湖。</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>🌍 當日氣候、氣溫與日出日落（舞鶴港至琵琶湖大津）</strong></li>
-<li><strong>日出/日落</strong>：日出 04:46 / 日落 19:16</li>
-<li><strong>均溫範圍</strong>：22°C - 29°C</li>
-<li><strong>往年氣候</strong>：舞鶴五老天空塔若遇早晨大雨後初晴，極有機會看見短暫的「初夏雲海」地形景觀；大津市區受琵琶湖調節，濕度稍高，多雲天。</li>
-<li><strong>🍇 當地專屬活動與限定物產</strong></li>
-<li><strong>限定物產</strong>：舞鶴肉馬鈴薯餅（肉じゃが發源地）、小濱鯖魚壽司、若狹烤甘鯛。</li>
-</ul>
-<hr />
-<h3 id="day-6629">🚗 Day 6：6/29 (星期一) | 飯店出發 ➔ 美秀美術館桃花源 ➔ 白鬚神社 ➔ 返回大津王子<a class="headerlink" href="#day-6629" title="Permanent link"></a></h3>
-<ul>
-<li><strong>今日路線</strong>：🏨 大津王子 ➔ 美秀美術館 ➔ 湖西近江牛午餐 ➔ 白鬚神社 ➔ 🏨 大津王子</li>
-<li><strong>今日總里程</strong>：約 110 公里</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left">時間</th>
-<th align="left">行程 / 景點 / 行動</th>
-<th align="left">里程/車程</th>
-<th align="left">停留上限</th>
-<th align="left">💡 自駕、休息與飯店筆記</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">09:00-10:00</td>
-<td align="left">飯店出發 ➔ 美秀美術館</td>
-<td align="left">35 km / 60分</td>
-<td align="left">-</td>
-<td align="left">往甲賀山區行駛，山路蜿蜒需注意安全。</td>
-</tr>
-<tr>
-<td align="left">10:00-12:30</td>
-<td align="left"><strong>美秀美術館 (MIHO MUSEUM)</strong></td>
-<td align="left">-</td>
-<td align="left">150分</td>
-<td align="left">貝聿銘大師驚世之作。穿過銀色隧道與吊橋，體驗現代桃花源建築。</td>
-</tr>
-<tr>
-<td align="left">12:30-13:30</td>
-<td align="left">美術館 ➔ 湖西景觀餐廳</td>
-<td align="left">25 km / 60分</td>
-<td align="left">-</td>
-<td align="left">駛出山區回到琵琶湖西岸。</td>
-</tr>
-<tr>
-<td align="left">13:30-15:00</td>
-<td align="left"><strong>近江牛奢華午餐</strong></td>
-<td align="left">-</td>
-<td align="left">90分</td>
-<td align="left">在湖西找一家面對琵琶湖的景觀餐廳，享用著名的近江牛料理。</td>
-</tr>
-<tr>
-<td align="left">15:00-15:30</td>
-<td align="left">餐廳 ➔ 白鬚神社</td>
-<td align="left">15 km / 30分</td>
-<td align="left">-</td>
-<td align="left">沿著湖西道路 (國道161號) 行駛。</td>
-</tr>
-<tr>
-<td align="left">15:30-16:30</td>
-<td align="left"><strong>白鬚神社 (湖中鳥居)</strong></td>
-<td align="left">-</td>
-<td align="left">60分</td>
-<td align="left">朝聖靜謐的湖中鳥居。<strong>注意：國道高架車流快，切勿違規穿越馬路至湖邊</strong>。</td>
-</tr>
-<tr>
-<td align="left">16:30-17:10</td>
-<td align="left">白鬚神社 ➔ 返回飯店</td>
-<td align="left">35 km / 40分</td>
-<td align="left">-</td>
-<td align="left">沿著湖西快速道路一路南下開回大津。</td>
-</tr>
-<tr>
-<td align="left">17:15~</td>
-<td align="left"><strong>🏨 琵琶湖大津王子大飯店</strong></td>
-<td align="left">-</td>
-<td align="left">-</td>
-<td align="left"><strong>續住 (連住 2/2)</strong><br>續住高樓層湖景房，免搬行李，晚上可欣賞大津湖畔夜景。</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>🌍 當日氣候、氣溫與日出日落（滋賀甲賀山區與琵琶湖畔）</strong></li>
-<li><strong>日出/日落</strong>：日出 04:47 / 日落 19:16</li>
-<li><strong>均溫範圍</strong>：19°C - 28°C（美秀美術館位於山區，體感明顯較涼，建議帶薄外套）</li>
-<li><strong>往年氣候</strong>：山區午前多為晴天或薄霧，下午易有局部短暫陰雨。白鬚神社傍晚日落時分，湖面在微風下常呈現絕美的金黃色波光。</li>
-<li><strong>🍇 當地專屬活動與限定物產</strong></li>
-<li><strong>限定物產</strong>：滋賀近江牛（頂級黑毛和牛）、琵琶湖香魚（あゆ，初夏肉質最嫩、帶有淡淡西瓜香氣）、鯽魚壽司。</li>
-</ul>
-<hr />
-<h3 id="day-7630">🚗 Day 7：6/30 (星期二) | 琵琶湖退房 ➔ 道之驛 ➔ 還車入住星野臨空城<a class="headerlink" href="#day-7630" title="Permanent link"></a></h3>
-<ul>
-<li><strong>今日路線</strong>：🏨 大津王子 ➔ 道の駅 草津 ➔ 關西機場（還車）➔ 🏨 OMO 關西機場 by 星野集團</li>
-<li><strong>今日總里程</strong>：約 125 公里</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left">時間</th>
-<th align="left">行程 / 景點 / 行動</th>
-<th align="left">里程/車程</th>
-<th align="left">停留上限</th>
-<th align="left">💡 自駕、休息與飯店筆記</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">10:00-10:30</td>
-<td align="left">飯店退房 ➔ 道の駅 草津</td>
-<td align="left">15 km / 30分</td>
-<td align="left">-</td>
-<td align="left">沿烏丸半島湖岸道路行駛。</td>
-</tr>
-<tr>
-<td align="left">10:30-11:30</td>
-<td align="left"><strong>道の駅 草津 (最後自駕休息點)</strong></td>
-<td align="left">-</td>
-<td align="left">60分</td>
-<td align="left"><strong>下車休息 15 分鐘</strong>。在此購入滋賀特產（近江茶等）。</td>
-</tr>
-<tr>
-<td align="left">11:30-13:00</td>
-<td align="left">道の駅 草津 ➔ 關西機場租車店</td>
-<td align="left">105 km / 90分</td>
-<td align="left">-</td>
-<td align="left"><strong>關鍵動線</strong>：走名神高速轉「阪神高速灣岸線」，<strong>完全避開大阪市中心最塞車的路段</strong>。</td>
-</tr>
-<tr>
-<td align="left">13:00-13:45</td>
-<td align="left"><strong>關西機場：加滿油、還車</strong></td>
-<td align="left">-</td>
-<td align="left">45分</td>
-<td align="left">還車前記得在機場附近的 ENEOS 加油站將油箱加滿，儲存好貴重線香。</td>
-</tr>
-<tr>
-<td align="left">13:45-14:15</td>
-<td align="left">關空 ➔ 臨空城站飯店</td>
-<td align="left">電車 1站</td>
-<td align="left">-</td>
-<td align="left">搭乘南海電鐵或JR，一站即達臨空城，步行至飯店。</td>
-</tr>
-<tr>
-<td align="left">15:00~</td>
-<td align="left"><strong>🏨 OMO 關西機場 by 星野集團</strong></td>
-<td align="left">-</td>
-<td align="left">-</td>
-<td align="left"><strong>入住 Check-in (連住 1/2)</strong><br>開啟「零開車、零行程壓力」的放空度假模式。星野集團聯名質感旅宿。</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>🌍 當日氣候、氣溫與日出日落（大阪臨空城/沿海區域）</strong></li>
-<li><strong>日出/日落</strong>：日出 04:47 / 日落 19:16</li>
-<li><strong>均溫範圍</strong>：23°C - 30°C</li>
-<li><strong>往年氣候</strong>：進入6月底，大阪臨空城沿海體感較為濕熱，典型的初夏氣候。晴天或多雲為主，海風能稍微減緩悶熱感。</li>
-<li><strong>🍇 當地專屬活動與限定物產</strong></li>
-<li><strong>限定物產</strong>：滋賀近江茶（草津站可購）、泉州水茄子（大阪泉州特產，多汁到可以當水果生吃）、水蜜桃（和歌山與泉州產，此時剛好上市）。</li>
-</ul>
-<hr />
-<h3 id="day-8-day-9-701-702">🚶 Day 8 - Day 9 (7/01 - 7/02) | 臨空城與市區自由放空行程不變<a class="headerlink" href="#day-8-day-9-701-702" title="Permanent link"></a></h3>
-<ul>
-<li><strong>Day 8</strong>：完全放空，慢步臨空公園（Rinku Park）看大阪灣日落、享受免開車的悠閒休假感。</li>
-<li>
-<p><strong>Day 9</strong>：中午前往泉佐野青空市場（Izumisano Aozora Market）享用最在地的海鮮丼與現撈海味，隨後前往關西機場辦理登機。</p>
-</li>
-<li>
-<p><strong>🌍 當日氣候、氣溫與日出日落（7/1 - 7/2 大阪沿海）</strong></p>
-</li>
-<li><strong>日出/日落</strong>：日出 04:48 / 日落 19:16</li>
-<li><strong>均溫範圍</strong>：24°C - 31°C</li>
-<li><strong>往年氣候</strong>：7月梅雨正式進入尾聲，太平洋高壓增強，天氣多為晴朗炎熱。臨空公園落日能見度極高，下午室外活動需注意防曬與補充水分。</li>
-<li><strong>🍇 當地專屬活動與限定物產</strong></li>
-<li><strong>限定物產</strong>：泉佐野青空市場現撈章魚、初夏大蝦、地穴子（星鰻）。</li>
-</ul></article></body></html>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 關西美學自駕慢活全方位行程指南 (RWD行動優化版)</title>
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2b6cb0;
+            --accent-color: #dd6b20;
+            --bg-color: #f7fafc;
+            --card-bg: #ffffff;
+            --text-color: #2d3748;
+            --text-light: #718096;
+            --border-color: #e2e8f0;
+            --michi-bg: #f0fff4;
+            --michi-border: #c6f6d5;
+            --michi-text: #22543d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 15px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1a365d 0%, #2a4365 100%);
+            color: #ffffff;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        header h1 {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 15px;
+            color: #e2e8f0;
+            font-weight: 300;
+        }
+
+        .meta-info {
+            background-color: var(--card-bg);
+            border-left: 5px solid var(--secondary-color);
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .meta-info h2 {
+            font-size: 18px;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+        }
+
+        .meta-info ul {
+            list-style-type: none;
+        }
+
+        .meta-info li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .meta-info li::before {
+            content: "▪";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-size: 16px;
+            top: -2px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin: 35px 0 15px 0;
+            padding-left: 10px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        /* Responsive Table Design using CSS Grid and Flexbox for mobile */
+        .schedule-container {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            overflow: hidden;
+        }
+
+        /* Desktop Table View */
+        .desktop-table {
+            width: 100%;
+            border-collapse: collapse;
+            display: table;
+        }
+
+        .desktop-table th, .desktop-table td {
+            padding: 18px 15px;
+            border-bottom: 1px solid var(--border-color);
+            text-align: left;
+            vertical-align: top;
+            font-size: 14px;
+        }
+
+        .desktop-table th {
+            background-color: #2b6cb0;
+            color: #ffffff;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .desktop-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .desktop-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        /* Utility Styles */
+        .date-badge {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 15px;
+            display: block;
+        }
+        
+        .day-label {
+            font-size: 12px;
+            color: #ffffff;
+            background-color: #4a5568;
+            padding: 2px 6px;
+            border-radius: 3px;
+            display: inline-block;
+            margin-top: 4px;
+        }
+
+        .weather-metrics {
+            font-size: 13px;
+            color: #4a5568;
+            background: #edf2f7;
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 5px;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .michi-box {
+            background-color: var(--michi-bg);
+            border: 1px solid var(--michi-border);
+            color: var(--michi-text);
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+
+        .michi-box strong {
+            display: block;
+            margin-bottom: 2px;
+            color: #1c452f;
+        }
+
+        /* Mobile Card View (Hidden by default) */
+        .mobile-cards {
+            display: none;
+        }
+
+        pre {
+            background: #2d3748;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 13px;
+            margin-top: 15px;
+        }
+
+        /* Media Query for RWD Mobile Screens */
+        @media screen and (max-width: 992px) {
+            .desktop-table {
+                display: none; /* Hide traditional table on tablets/phones */
+            }
+
+            .mobile-cards {
+                display: block; /* Show specialized card layouts instead */
+            }
+
+            .card {
+                background: var(--card-bg);
+                border-radius: 12px;
+                margin-bottom: 20px;
+                padding: 20px;
+                border: 1px solid var(--border-color);
+                box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            }
+
+            .card-header {
+                border-bottom: 2px solid var(--border-color);
+                padding-bottom: 12px;
+                margin-bottom: 15px;
+            }
+
+            .card-row {
+                margin-bottom: 15px;
+            }
+
+            .card-row:last-child {
+                margin-bottom: 0;
+            }
+
+            .card-label {
+                font-size: 12px;
+                font-weight: 700;
+                color: var(--secondary-color);
+                text-transform: uppercase;
+                margin-bottom: 4px;
+                display: block;
+            }
+
+            .card-body-text {
+                font-size: 14px;
+            }
+            
+            header h1 {
+                font-size: 20px;
+            }
+            
+            header p {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>2026 關西美學自駕慢活全方位行程指南</h1>
+            <p>跨越山海、親歷大師清水模結構的 9 天 8 夜極致避雨美學計畫</p>
+        </header>
+
+        <div class="meta-info">
+            <h2>📋 行程核心慢活設定</h2>
+            <ul>
+                <li><strong>旅行日期：</strong>2026年6月24日（三）～ 7月2日（四）</li>
+                <li><strong>三大名家美學：</strong>隈研吾（古蹟活化）、貝聿銘（山中地下神殿）、安藤忠雄（海天幾何清水模）</li>
+                <li><strong>行車安全限額：</strong>每日自駕總里程完全控制在 200 公里以下，預算長途行駛 10-15 分鐘常規休息。</li>
+                <li><strong>出歸班機設定：</strong>7/2 返台為下午 18:00 關西空港（KIX）起飛班機，回程當日安排完美無匆忙。</li>
+            </ul>
+        </div>
+
+        <div class="section-title">📅 9天8夜全方位慢活終極對比大表 (跨裝置智慧 RWD)</div>
+
+        <div class="schedule-container">
+            <!-- ========== 1. DESKTOP VIEW ========== -->
+            <table class="desktop-table">
+                <thead>
+                    <tr>
+                        <th style="width: 12%;">日期與星期</th>
+                        <th style="width: 18%;">⏰ 氣候、天色、氣溫</th>
+                        <th style="width: 35%;">🏛️ 每日精緻慢活行程動線 (含最大停留時間)</th>
+                        <th style="width: 23%;">🚗 交通工具、里程里程與休息站</th>
+                        <th style="width: 12%;">🏮 日本可能節慶</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Day 1 -->
+                    <tr>
+                        <td><span class="date-badge">6/24 (三)</span><span class="day-label">Day 1 【京都】</span></td>
+                        <td><div class="weather-metrics">🌅 04:43 / 🌇 19:15<br>🌡️ 22°C - 30°C<br>☁️ 梅雨季多雲偶雨</div></td>
+                        <td>• <strong>下午</strong>：抵達關西機場 ➔ 直奔京都 ➔ 辦理入住 <strong>Ace Hotel Kyoto</strong>。<br>• <strong>傍晚</strong>：與飯店共構的【新風館】天井商場慢步（最大停留：<span class="highlight">3小時</span>），走訪大師級藍瓶咖啡、文青選物書店。<br>• <strong>夜間</strong>：歷史棟客房黑膠微醺時光（最大停留：<span class="highlight">不限</span>）。</td>
+                        <td><strong>🚂 鐵道移動</strong>：<br>關西機場 ➔ (JR 特急 HARUKA，約 75 分鐘) ➔ 京都車站 ➔ (地鐵烏丸線，約 6 分鐘) ➔ 烏丸御池站。<br>非自駕，可在特急車上深度歇息。</td>
+                        <td>🏮 <strong>京都夏越祓準備期</strong><br>☔ <strong>防禦率 100%</strong>：烏丸御池地鐵站通道直結飯店大廳，大雨完全免撐傘。</td>
+                    </tr>
+                    <!-- Day 2 -->
+                    <tr>
+                        <td><span class="date-badge">6/25 (四)</span><span class="day-label">Day 2 【京都】</span></td>
+                        <td><div class="weather-metrics">🌅 04:44 / 🌇 19:15<br>🌡️ 22°C - 30°C<br>☁️ 多雲有雨，市區濕度高</div></td>
+                        <td>• <strong>上午</strong>：【京都京瓷美術館】（青木淳改建）或【京都國立近代美術館】看展、聽雨（最大停留：<span class="highlight">3.5小時</span>）。<br>• <strong>下午</strong>：【南禪寺】大方丈庭園聆聽雨落枯山水，漫步大雨中更顯古樸的紅磚【水路閣】（最大停留：<span class="highlight">2.5小時</span>）。<br>• <strong>晚餐</strong>：烏丸御池或三條週邊的隱密町家割烹，安靜享用時令旬味（最大停留：<span class="highlight">2小時</span>）。</td>
+                        <td><strong>🚇 城市公共運輸</strong>：<br>全日搭乘京都市營地鐵（烏丸線、東西線），轉乘多在室內。<br>景點間皆有高級茶屋咖啡座，隨時可進行 15 分鐘小歇。</td>
+                        <td>🏮 <strong>愛宕神社・燈籠祭準備</strong><br>☔ 美術館與南禪寺方丈皆有全罩式長廊，雨天的青苔在水氣洗刷下更顯深邃。</td>
+                    </tr>
+                    <!-- Day 3 -->
+                    <tr>
+                        <td><span class="date-badge">6/26 (五)</span><span class="day-label">Day 3 【琵琶湖】</span></td>
+                        <td><div class="weather-metrics">🌅 04:44 / 🌇 19:15<br>🌡️ 21°C - 29°C<br>☁️ 山區易有山霧與煙雨</div></td>
+                        <td>• <strong>上午</strong>：京都取車 ➔ 驅車深入甲賀山區 ➔ 探訪貝聿銘桃花源<strong>【美秀美術館 MIHO MUSEUM】</strong>（最大停留：<span class="highlight">3.5小時</span>，包含館內自然農法午餐）。<br>• <strong>下午</strong>：下山驅車直奔大津市區<strong>【琵琶湖飯店】（Biwako Hotel）</strong>，辦理行政樓層入住。<br>• <strong>傍晚</strong>：專屬行政酒廊放空，品嚐精緻茶歇與酒水，俯瞰無邊際煙雨湖景（最大停留：<span class="highlight">4小時</span>）。</td>
+                        <td><strong>🚗 自駕啟航 (Day 1)</strong>：<br>京都烏丸取車 ➔ 新名神高速（信樂IC）➔ MIHO美術館 ➔ 大津市飯店。<br>• <strong>總里程：</strong> <span class="highlight">約 75 公里</span><br>• <strong>車程：</strong> 約 1.5 小時<br><div class="michi-box"><strong>🎒 精選道の駅：綠之大地 信樂</strong>下山順路，可停留 15 分鐘小憩，採購新鮮果物與在地信樂燒陶藝。</div></td>
+                        <td>🏮 <strong>滋賀信樂陶藝夏之市</strong><br>☔ <strong>終極防禦 95%</strong>：MIHO 美術館 80% 埋藏於山體內，大雨打在天幕玻璃上襯托出山霧的縹緲。</td>
+                    </tr>
+                    <!-- Day 4 -->
+                    <tr>
+                        <td><span class="date-badge">6/27 (六)</span><span class="day-label">Day 4 【琵琶湖】</span></td>
+                        <td><div class="weather-metrics">🌅 04:44 / 🌇 19:16<br>🌡️ 21°C - 29°C<br>☁️ 湖面偶有薄霧/晴雨交替</div></td>
+                        <td>• <strong>上午</strong>：沿琵琶湖西岸北上 ➔ 造訪【白鬚神社】，近距離欣賞矗立於湖中的神聖水上鳥居（最大停留：<span class="highlight">1.5小時</span>）。<br>• <strong>下午</strong>：橫跨琵琶湖大橋至東岸 ➔ 【近江八幡古街（八幡堀）】漫步，隨後於百年老屋改建的茶屋避雨品茗（最大停留：<span class="highlight">3小時</span>）。<br>• <strong>晚餐</strong>：預約老字號近江牛餐廳（如千成亭），享用頂級近江牛壽喜燒（最大停留：<span class="highlight">2.5小時</span>）。</td>
+                        <td><strong>🚗 自駕慢遊 (Day 2)</strong>：<br>大津 ➔ 白鬚神社 ➔ 琵琶湖大橋 ➔ 近江八幡 ➔ 返回大津飯店。<br>• <strong>總里程：</strong> <span class="highlight">約 120 公里</span><br>• <strong>車程：</strong> 約 2.5 小時<br><div class="michi-box"><strong>🎒 精選道の駅：琵琶湖大橋米廣場</strong>位於大橋西接點，可停留 20 分鐘，採購在地近江米與新鮮近江茶。</div></td>
+                        <td>🏮 <strong>近江八幡初夏水鄉祭事</strong><br>☔ 景點間皆由自駕車輛銜接，免去雨中等車的狼狽。湖霧籠罩呈現水墨空靈感。</td>
+                    </tr>
+                    <!-- Day 5 -->
+                    <tr>
+                        <td><span class="date-badge">6/28 (日)</span><span class="day-label">Day 5 【淡路島】</span></td>
+                        <td><div class="weather-metrics">🌅 04:46 / 🌇 19:16<br>🌡️ 22°C - 28°C<br>☁️ 沿海易有雲海與海霧</div></td>
+                        <td>• <strong>上午</strong>：大津退房 ➔ 走高速道路南下，橫跨宏偉的【明石海峽大橋】，正式登陸淡路島。<br>• <strong>下午</strong>：前往西岸或直接辦理設計酒店入住<strong>【TOTO Seawind 淡路】</strong>（最大停留：<span class="highlight">不限</span>）。<br>• <strong>傍晚</strong>：在房內靜聽海浪，沉浸於大師清水模幾何線條與瀨戶內海海景的純粹對話。</td>
+                        <td><strong>🚗 跨海長征 (Day 3)</strong>：<br>琵琶湖大津 ➔ (高速道路) ➔ 明石海峽大橋 ➔ 淡路島酒店。<br>• <strong>總里程：</strong> <span class="highlight">約 130 公里</span><br>• <strong>車程：</strong> 約 2 小時 10 分鐘<br><div class="michi-box"><strong>🎒 精選休息站：淡路SA (服務區)</strong>過橋後立刻抵達，設有大面落地窗觀景台，強制休息 15 分鐘，採購淡路島洋蔥湯。</div></td>
+                        <td>🏮 <strong>瀨戶內初夏海神祭準備期</strong><br>☔ 跨海開車大景。大雨打在混凝土牆面上，更顯安藤忠雄空間的靜謐與力量。</td>
+                    </tr>
+                    <!-- Day 6 -->
+                    <tr>
+                        <td><span class="date-badge">6/29 (一)</span><span class="day-label">Day 6 【淡路島】</span></td>
+                        <td><div class="weather-metrics">🌅 04:46 / 🌇 19:16<br>🌡️ 22°C - 28°C<br>☀️ 歷史紀錄晴天率最高</div></td>
+                        <td>• <strong>上午</strong>：自駕前往【淡路夢舞台】漫步百段苑幾何階梯，造訪<strong>【海之教堂】</strong>，仰望清水模十字架的鏤空光影（最大停留：<span class="highlight">3小時</span>）。<br>• <strong>下午</strong>：驅車前往<strong>【本福寺水御堂】</strong>，穿過清水模弧牆，從巨大的紅蓮花池中央走入紅色地下大殿（最大停留：<span class="highlight">2小時</span>）。<br>• <strong>傍晚</strong>：在地農產直賣所採購當季頂級水果（清水白桃、淡路島洋蔥製品），回飯店優雅享用（最大停留：<span class="highlight">1.5小時</span>）。</td>
+                        <td><strong>🚗 離島自駕 (Day 4)</strong>：<br>飯店 ➔ 淡路夢舞台 ➔ 本福寺水御堂 ➔ 返回飯店。<br>• <strong>總里程：</strong> <span class="highlight">約 35 公里</span><br>• <strong>車程：</strong> 約 1 小時<br><div class="michi-box"><strong>🎒 精選道の駅：東浦總合流道</strong>靠近本福寺，可停留 15 分鐘休息，品嚐有名的小豆島手延素麵。</div></td>
+                        <td>🏮 <strong>淡路島香之鄉文化體驗</strong><br>☔ <strong>震撼級雨備</strong>：海之教堂與水御堂皆為安藤忠雄室內美學神作，大雨天的光影折射與水面漣漪反而更能襯托空間洗鍊。</td>
+                    </tr>
+                    <!-- Day 7 -->
+                    <tr>
+                        <td><span class="date-badge">6/30 (二)</span><span class="day-label">Day 7 【梅田】</span></td>
+                        <td><div class="weather-metrics">🌅 04:46 / 🌇 19:16<br>🌡️ 23°C - 30°C<br>☁️ 典型梅雨末期暴雨可能</div></td>
+                        <td>• <strong>上午</strong>：淡路島退房北返 ➔ 開車跨越明石海峽大橋 ➔ 一路開回京都辦理還車（最大停留：<span class="highlight">30分鐘</span>）。<br>• <strong>下午</strong>：京都車站轉乘鐵道直奔大阪梅田 ➔ 精品高質感飯店辦理入住。<br>• <strong>夜間</strong>：待在高樓層客房內，俯瞰璀璨的大阪都市高空夜景（最大停留：<span class="highlight">不限</span>）。</td>
+                        <td><strong>🚗 ➔ 🚂 交通切換 (自駕結束)</strong>：<br>淡路島 ➔ 京都車站還車 ➔ 搭特急至大阪梅田。<br>• <strong>自駕總里程：</strong> <span class="highlight">約 125 公里</span><br>• <strong>車程：</strong> 約 1 小時 40 分鐘<br>自駕行經【京滋Bye-pass】時，可於國道商店小憩 10 分鐘，還車後在特急火車上可深度休息 30 分鐘。</td>
+                        <td>🏮 <span class="highlight">【全日本 ✕ 夏越祓 當日】</span><br>🌟 <strong>今日為日本半年除厄祭典</strong>。傍晚可在梅田市區神社參與「穿茅之輪」儀式，洗滌疲憊。</td>
+                    </tr>
+                    <!-- Day 8 -->
+                    <tr>
+                        <td><span class="date-badge">7/1 (三)</span><span class="day-label">Day 8 【梅田】</span></td>
+                        <td><div class="weather-metrics">🌅 04:47 / 🌇 19:16<br>🌡️ 23°C - 30°C<br>☁️ 盆地地形多雲短暫雨</div></td>
+                        <td>• <strong>上午</strong>：全日享受梅田全罩式地下與室內連通道系統，漫步於 Grand Front Osaka 等高質感商場空間（最大停留：<span class="highlight">3.5小時</span>）。<br>• <strong>下午</strong>：前往<strong>【梅田蔦屋書店】</strong>（綠意與優雅燈光環繞的城市文化客廳），點杯手沖咖啡靠在沙發上安靜翻閱設計藝術選書（最大停留：<span class="highlight">4小時</span>）。<br>• <strong>晚餐</strong>：在商場高空餐廳享用精緻的割烹或日式料理（最大停留：<span class="highlight">2.5小時</span>）。</td>
+                        <td><strong>🚶 步行慢活（無自駕）</strong>：<br>全日利用梅田極致發達的室內與地下步道。<br>蔦屋書店與商場內部設有大量極高質感的獨立沙發區與高級咖啡座，可隨時進行 15-30 分鐘的靜態休息。</td>
+                        <td>🏮 <strong>大阪生國魂神社・生玉夏祭準備期</strong><br>☔ <strong>梅田神級防雨圈</strong>：整個梅田精華區皆有發達室內連通道，雨天完全不需要撐傘，優雅乾爽。</td>
+                    </tr>
+                    <!-- Day 9 -->
+                    <tr>
+                        <td><span class="date-badge">7/2 (四)</span><span class="day-label">Day 9 【返台】</span></td>
+                        <td><div class="weather-metrics">🌅 04:47 / 🌇 19:15<br>🌡️ 23°C - 31°C<br>☁️ 出梅前夕多雲天氣</div></td>
+                        <td>• <strong>08:30-11:00</strong>：飯店慢活早餐，最後封箱（最大停留：<span class="highlight">2.5小時</span>）。<br>• <strong>11:30-12:20</strong>：自梅田優雅搭乘機場利木津巴士直達關西機場。<br>• <strong>12:30-14:30</strong>：<strong>【泉佐野青空市場】</strong>二樓海鮮丼食堂，享用現捕頂級穴子星鰻、地蛸與海膽（最大停留：<span class="highlight">2小時</span>）。<br>• <strong>15:30~</strong>：提早於登機前 2.5 小時進場託運，優雅巡禮免稅店，迎接 <span class="highlight">18:00 班機</span>返台。</td>
+                        <td><strong>🚌 巴士與短途計程車移動</strong>：<br>梅田 ➔ (機場利木津巴士，約 50 分鐘) ➔ 關西空港 ➔ (短途計程車10分鐘) ➔ 泉佐野漁港。<br>利木津巴士一人一座位、行李專人裝卸，可閉目養神一整路。</td>
+                        <td>🏮 <strong>京都祇園祭・吉符入正式揭幕</strong><br>☔ <strong>全罩式海鮮雨備</strong>：泉佐野市場為全罩式鋼骨雨棚，二樓食堂完全在室內，衣服鞋子絕不弄濕。關空回程全程空橋直通。</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- ========== 2. MOBILE CARD VIEW ========== -->
+            <div class="mobile-cards">
+                <!-- Day 1 Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="date-badge">6/24 (三) Day 1 【京都】</span>
+                        <div class="weather-metrics">🌅 04:43 / 🌇 19:15 | 🌡️ 22°C - 30°C | ☁️ 多雲偶雨</div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🏛️ 每日精緻動線 (最大停留)</span>
+                        <div class="card-body-text">
+                            下午抵達關西機場直奔京都，辦理入住 <strong>Ace Hotel Kyoto</strong>。傍晚於飯店共構的【新風館】天井商場慢步（<span class="highlight">3小時</span>），走訪藍瓶咖啡、文青選物店。夜間於歷史棟客房享受黑膠微醺時光（<span class="highlight">不限</span>）。
+                        </div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🚗 交通工具與休息策略</span>
+                        <div class="card-body-text">🚂 <strong>鐵道移動</strong>：關西機場搭乘 JR 特急 HARUKA（約 75 分鐘）直達京都車站，轉地鐵烏丸線（6 分鐘）至烏丸御池站。車廂寬敞，可深度歇息。</div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🏮 節慶與抗雨防禦</span>
+                        <div class="card-body-text">京都夏越祓準備期。☔ <strong>防禦率 100%</strong>：烏丸御池地鐵站通道直結飯店大廳，大雨完全免撐傘。</div>
+                    </div>
+                </div>
+
+                <!-- Day 2 Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="date-badge">6/25 (四) Day 2 【京都】</span>
+                        <div class="weather-metrics">🌅 04:44 / 🌇 19:15 | 🌡️ 22°C - 30°C | ☁️ 多雲有雨</div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🏛️ 每日精緻動線 (最大停留)</span>
+                        <div class="card-body-text">
+                            上午前往【京都京瓷美術館】（青木淳改建）或【京都國立近代美術館】看展、聽雨（<span class="highlight">3.5小時</span>）。下午於【南禪寺】大方丈庭園聆聽雨落枯山水，漫步古樸紅磚【水路閣】（<span class="highlight">2.5小時</span>）。晚餐預約烏丸御池町家割烹（<span class="highlight">2小時</span>）。
+                        </div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🚗 交通工具與休息策略</span>
+                        <div class="card-body-text">🚇 <strong>城市公共運輸</strong>：全日搭乘京都市營地鐵（烏丸線、東西線），轉乘多在室內。景點間皆有高級茶屋咖啡座可供小歇。</div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🏮 節慶與抗雨防禦</span>
+                        <div class="card-body-text">愛宕神社・燈籠祭準備。☔ 美術館與南禪寺方丈皆有全罩式長廊，雨天的青苔在水氣洗刷下更顯深邃。</div>
+                    </div>
+                </div>
+
+                <!-- Day 3 Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="date-badge">6/26 (五) Day 3 【琵琶湖】</span>
+                        <div class="weather-metrics">🌅 04:44 / 🌇 19:15 | 🌡️ 21°C - 29°C | ☁️ 山區易有霧</div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🏛️ 每日精緻動線 (最大停留)</span>
+                        <div class="card-body-text">
+                            上午京都取車，驅車深入甲賀山區，探訪貝聿銘桃花源<strong>【美秀美術館 MIHO MUSEUM】</strong>（<span class="highlight">3.5小時</span>，含館內自然農法午餐）。下午開車直奔大津市區<strong>【琵琶湖飯店】</strong>行政樓層入住。傍晚在專屬行政酒廊放空，俯瞰無邊際煙雨湖景（<span class="highlight">4小時</span>）。
+                        </div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🚗 交通工具與休息策略</span>
+                        <div class="card-body-text">
+                            <strong>🚗 自駕啟航 (Day 1)</strong>：京都取車 ➔ 新名神高速 ➔ MIHO美術館 ➔ 大津市飯店。<br>• <strong>總里程：</strong> 約 75 公里 | • <strong>車程：</strong> 約 1.5 小時
+                            <div class="michi-box"><strong>🎒 精選道の駅：綠之大地 信樂</strong>下山順路，可停留 15 分鐘小憩，採購新鮮果物與在地信樂燒陶藝。</div>
+                        </div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🏮 節慶與抗雨防禦</span>
+                        <div class="card-body-text">滋賀信樂陶藝夏之市。☔ <strong>終極防禦 95%</strong>：MIHO 美術館 80% 埋藏於山體內，大雨打在天幕玻璃上襯托出山霧的縹緲。</div>
+                    </div>
+                </div>
+
+                <!-- Day 4 Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="date-badge">6/27 (六) Day 4 【琵琶湖】</span>
+                        <div class="weather-metrics">🌅 04:44 / 🌇 19:16 | 🌡️ 21°C - 29°C | ☁️ 晴雨交替</div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🏛️ 每日精緻動線 (最大停留)</span>
+                        <div class="card-body-text">
+                            上午沿琵琶湖西岸北上，造訪【白鬚神社】欣賞矗立於湖中的水上鳥居（<span class="highlight">1.5小時</span>）。下午橫跨琵琶湖大橋至東岸，漫步【近江八幡古街（八幡堀）】與百年茶屋避雨品茗（<span class="highlight">3小時</span>）。晚餐享用頂級近江牛壽喜燒（<span class="highlight">2.5小時</span>）。
+                        </div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🚗 交通工具與休息策略</span>
+                        <div class="card-body-text">
+                            <strong>🚗 自駕慢遊 (Day 2)</strong>：大津飯店 ➔ 白鬚神社 ➔ 琵琶湖大橋 ➔ 近江八幡 ➔ 返回大津。<br>• <strong>總里程：</strong> 約 120 公里 | • <strong>車程：</strong> 約 2.5 小時
+                            <div class="michi-box"><strong>🎒 精選道の駅：琵琶湖大橋米廣場</strong>位於大橋西接點，可停留 20 分鐘，採購在地近江米。</div>
+                        </div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🏮 節慶與抗雨防禦</span>
+                        <div class="card-body-text">近江八幡初夏水鄉祭事。☔ 景點間皆由自駕車輛銜接，免去雨中等車的狼狽。</div>
+                    </div>
+                </div>
+
+                <!-- Day 5 Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="date-badge">6/28 (日) Day 5 【淡路島】</span>
+                        <div class="weather-metrics">🌅 04:46 / 🌇 19:16 | 🌡️ 22°C - 28°C | ☁️ 易有海霧</div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🏛️ 每日精緻動線 (最大停留)</span>
+                        <div class="card-body-text">
+                            上午大津退房，走高速道路南下，橫跨宏偉的【明石海峽大橋】，正式登陸淡路島。下午辦理設計酒店入住<strong>【TOTO Seawind 淡路】</strong>（<span class="highlight">不限</span>）。傍晚在房內靜聽海浪，沉浸於安藤忠雄清水模與瀨戶內海海景的對話。
+                        </div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🚗 交通工具與休息策略</span>
+                        <div class="card-body-text">
+                            <strong>🚗 跨海長征 (Day 3)</strong>：琵琶湖 ➔ (高速道路) ➔ 明石海峽大橋 ➔ 淡路島酒店。<br>• <strong>總里程：</strong> 約 130 公里 | • <strong>車程：</strong> 約 2 小時 10 分鐘
+                            <div class="michi-box"><strong>🎒 精選休息站：淡路SA (服務區)</strong>過橋後立刻抵達，設有大面落地窗觀景台，強制休息 15 分鐘，採購淡路島洋蔥湯。</div>
+                        </div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🏮 節慶與抗雨防禦</span>
+                        <div class="card-body-text">瀨戶內初夏海神祭準備期。☔ 跨海開車大景。大雨打在混凝土牆面上，更顯安藤忠雄空間的靜謐與力量。</div>
+                    </div>
+                </div>
+
+                <!-- Day 6 Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="date-badge">6/29 (一) Day 6 【淡路島】</span>
+                        <div class="weather-metrics">🌅 04:46 / 🌇 19:16 | 🌡️ 22°C - 28°C | ☀️ 晴天率最高</div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🏛️ 每日精緻動線 (最大停留)</span>
+                        <div class="card-body-text">
+                            上午自駕前往【淡路夢舞台】漫步百段苑幾何階梯，造訪<strong>【海之教堂】</strong>，仰望清水模十字架的鏤空光影（<span class="highlight">3小時</span>）。下午驅車前往<strong>【本福寺水御堂】</strong>，穿過清水模弧牆，從巨大的紅蓮花池中央走入紅色地下大殿（<span class="highlight">2小時</span>）。傍晚採購清水白桃（<span class="highlight">1.5小時</span>）。
+                        </div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🚗 交通工具與休息策略</span>
+                        <div class="card-body-text">
+                            <strong>🚗 離島自駕 (Day 4)</strong>：飯店 ➔ 淡路夢舞台 ➔ 本福寺水御堂 ➔ 返回飯店。<br>• <strong>總里程：</strong> 約 35 公里 | • <strong>車程：</strong> 約 1 小時
+                            <div class="michi-box"><strong>🎒 精選道の駅：東浦總合流道</strong>靠近本福寺，可停留 15 分鐘休息，品嚐有名的小豆島手延素麵。</div>
+                        </div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🏮 節慶與抗雨防禦</span>
+                        <div class="card-body-text">淡路島香之鄉文化體驗。☔ <strong>震撼級雨備</strong>：海之教堂與水御堂皆為室內美學神作，大雨天的光影折射與水面漣漪反而更能襯托空間洗鍊。</div>
+                    </div>
+                </div>
+
+                <!-- Day 7 Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="date-badge">6/30 (二) Day 7 【梅田】</span>
+                        <div class="weather-metrics">🌅 04:46 / 🌇 19:16 | 🌡️ 23°C - 30°C | ☁️ 典型的梅雨末期</div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🏛️ 每日精緻動線 (最大停留)</span>
+                        <div class="card-body-text">
+                            上午淡路島退房北返，跨越明石海峽大橋開回京都還車（<span class="highlight">30分鐘</span>）。下午京都車站轉乘鐵道直奔大阪梅田精品高質感飯店辦理入住。夜間待在高樓層客房內，俯瞰璀璨的大阪都市高空夜景（<span class="highlight">不限</span>）。
+                        </div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🚗 交通工具與休息策略</span>
+                        <div class="card-body-text">
+                            <strong>🚗 ➔ 🚂 交通切換 (自駕結束)</strong>：淡路島 ➔ 京都車站還車 ➔ 搭特急至大阪梅田。<br>• <strong>自駕總里程：</strong> 約 125 公里 | • <strong>車程：</strong> 約 1 小時 40 分鐘<br>自駕行經【京滋Bye-pass】時可於國道商店小憩 10 分鐘，還車後在特急火車上深度休息 30 分鐘。
+                        </div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🏮 節慶與抗雨防禦</span>
+                        <div class="card-body-text"><span class="highlight">【全日本 ✕ 夏越祓 當日】</span>🌟 <strong>今日為日本半年除厄祭典</strong>。傍晚可在梅田市區神社參與「穿茅之輪」儀式，洗滌厄運。</div>
+                    </div>
+                </div>
+
+                <!-- Day 8 Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="date-badge">7/1 (三) Day 8 【梅田】</span>
+                        <div class="weather-metrics">🌅 04:47 / 🌇 19:16 | 🌡️ 23°C - 30°C | ☁️ 短暫雨</div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🏛️ 每日精緻動線 (最大停留)</span>
+                        <div class="card-body-text">
+                            上午全日享受梅田全罩式地下與室內連通道系統，漫步於 Grand Front Osaka 等高質感商商空間（<span class="highlight">3.5小時</span>）。下午前往<strong>【梅田蔦屋書店】</strong>，點杯手沖咖啡靠在沙發上安靜翻閱設計藝術選書（<span class="highlight">4小時</span>）。晚餐在商場高空餐廳享用精緻日式料理（<span class="highlight">2.5小時</span>）。
+                        </div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🚗 交通工具與休息策略</span>
+                        <div class="card-body-text"><strong>🚶 步行慢活（無自駕）</strong>：全日利用梅田極致發達的室內與地下步道。蔦屋書店與商場內部設有大量極高質感的獨立沙發區與高級咖啡座。</div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🏮 節慶與抗雨防禦</span>
+                        <div class="card-body-text">大阪生國魂神社・生玉夏祭準備期。☔ <strong>梅田神級防雨圈</strong>：整個梅田精華區皆有發達室內連通道，雨天完全不需要撐傘。</div>
+                    </div>
+                </div>
+
+                <!-- Day 9 Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="date-badge">7/2 (四) Day 9 【返台】</span>
+                        <div class="weather-metrics">🌅 04:47 / 🌇 19:15 | 🌡️ 23°C - 31°C | ☁️ 多雲</div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🏛️ 每日精緻動線 (最大停留)</span>
+                        <div class="card-body-text">
+                            08:30-11:00 飯店慢活早餐與最後封箱（<span class="highlight">2.5小時</span>）。11:30-12:20 從梅田搭乘機場利木津巴士直達關西機場。12:30-14:30 前往機場旁的<strong>【泉佐野青空市場】</strong>二樓海鮮丼食堂，享用現捕頂級穴子星鰻、地蛸與海膽（<span class="highlight">2小時</span>）。15:30 辦理登機，準備搭乘 <span class="highlight">18:00 班機</span>返台。
+                        </div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🚗 交通工具與休息策略</span>
+                        <div class="card-body-text"><strong>🚌 巴士與短途計程車移動</strong>：梅田 ➔ 利木津巴士（50分鐘）➔ 關西空港 ➔ 短途計程車（10分鐘）➔ 泉佐野漁港。巴士一人一座位、行李專人裝卸。</div>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label">🏮 節慶與抗雨防禦</span>
+                        <div class="card-body-text">京都祇園祭・吉符入正式揭幕。☔ <strong>全罩式海鮮雨備</strong>：泉佐野市場為全罩式鋼骨雨棚，二樓食堂完全在室內，衣服鞋子絕不弄濕。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">🗺️ Google Maps 我的地圖一鍵匯入 CSV 數據</div>
+        <p style="font-size: 14px; color: var(--text-light); margin-bottom: 5px;">您可以複製下方代碼區塊內的內容，儲存為 <code>kansai_slowtravel_rwd.csv</code>，即可直接匯入 Google 我的地圖（My Maps）中：</p>
+        <pre>WKT,Name,Description
+"POINT(135.4582 34.4320)",KIX Airport,Day 1：10:10抵達轉特急HARUKA
+"POINT(135.7612 35.0116)",Ace Hotel Kyoto,🏨 Day 1-2 飯店：烏丸御池地鐵直結 1926年古蹟歷史棟
+"POINT(135.7772 35.0125)",Kyoto Kyocera Museum,Day 2：京都京瓷美術館（全室內頂級雨備清水模）
+"POINT(135.7942 35.0111)",Nanzen-ji Temple,Day 2：南禪寺與水路閣（雨天綠意青苔水墨感）
+"POINT(136.0011 34.9121)",MIHO MUSEUM,🎯 Day 3 核心：美秀美術館（貝聿銘大師地下清水模桃花源）
+"POINT(136.0621 34.8872)",Michi-no-Eki Shigaraki,Day 3 自駕小憩點：公路休息站綠之大地信樂
+"POINT(135.8752 35.0081)",Biwako Hotel,🏨 Day 3-4 飯店：琵琶湖飯店行政樓層（180度全幅面湖景）
+"POINT(136.0121 35.2752)",Shirahige Shrine,Day 4 自駕景點：白鬚神社水上鳥居大景
+"POINT(135.9891 35.0211)",Michi-no-Eki Biwako Ohashi,Day 4 自駕小憩點：公路休息站琵琶湖大橋米廣場
+"POINT(136.0962 35.1511)",Omihachiman Hachimanbori,Day 4 自駕景點：近江八幡水鄉江戶白壁古街
+"POINT(135.0112 34.5881)",Awaji SA,Day 5 自駕小憩點：明石海峽大橋過橋後淡路服務區
+"POINT(134.9652 34.5121)",TOTO Seawind Awaji,🏨 Day 5-6 飯店：安藤忠雄依山傍海幾何清水模傑作
+"POINT(135.0082 34.5611)",Awaji Yumebutai,Day 6 自駕景點：淡路夢舞台海之教堂（大師清水模鏤空十字架）
+"POINT(134.9921 34.5491)",Honfukuji Water Temple,Day 6 自駕景點：本福寺水御堂（蓮花池中央地下紅大殿）
+"POINT(134.9712 34.5321)",Michi-no-Eki Higashiura,Day 6 自駕小憩點：公路休息站東浦總合流道
+"POINT(135.4952 34.7021)",Grand Front Osaka,🏨 Day 7-8 飯店所在：梅田精品高空酒店與全罩式雨備圈
+"POINT(135.4961 34.7032)",Umeda Tsutaya Books,Day 8：梅田蔦屋書店（全室內高質感文化客廳沙發放空）
+"POINT(135.4121 34.4231)",Izumisano Open Air Market,Day 9 最終回：泉佐野青空市場（全罩式室內海鮮星鰻食堂）</pre>
+    </div>
+
+</body>
+</html>
