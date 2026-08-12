@@ -1,11 +1,8 @@
-import os
-from weasyprint import HTML
-
-html_content = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-<title>北海道11日自駕行程表（去屈斜路湖版）</title>
+<title>北海道11日自駕行程表（賞楓・中札內美術村・奢華溫泉終極版）</title>
 <style>
   @page {
     size: A4;
@@ -35,7 +32,7 @@ html_content = """<!DOCTYPE html>
   }
 
   .header-title {
-    font-size: 14.5pt;
+    font-size: 14pt;
     font-weight: bold;
     margin: 0 0 3px 0;
     color: #f8fafc;
@@ -162,13 +159,13 @@ html_content = """<!DOCTYPE html>
 <body>
 
 <div class="header-card">
-  <div class="header-title">北海道順時針自駕（賞楓・知床五湖・十勝・洞爺湖・去屈斜路湖修正版）</div>
-  <div class="header-subtitle">🍁 大雪山黑岳初雪 ＆ 知床世界遺產 ＆ 根室最東端 ＆ 釧路幣舞橋 ＆ 十勝美肌溫泉 ＆ 洞爺湖 ＆ 螃蟹生蠔大滿貫</div>
+  <div class="header-title">北海道順時針自駕（賞楓・中札內美術村・奢華溫泉大滿貫）</div>
+  <div class="header-subtitle">🍁 旭岳高山初雪 ＆ 知床世界遺產 ＆ 根室最東端 ＆ 釧路夕陽 ＆ 六花亭中札內美術村 ＆ 乃之風洞爺湖</div>
   <div class="meta-grid">
     <div class="meta-col"><span class="meta-label">🚘 租車/車款</span>Subaru Forester AWD (新千歲 WNR 10/11 12:00取, 10/21 15:30還)</div>
     <div class="meta-col"><span class="meta-label">💳 過路費決策</span>不安裝 HEP Pass！僅租 ETC 空卡實報實銷 (約 ¥9,800)</div>
     <div class="meta-col"><span class="meta-label">🛍️ 戶外採買</span>Prono (旭川/帶廣/惠庭門市)、Montbell (旭川/小清水門市)</div>
-    <div class="meta-col"><span class="meta-label">☕ 慢活精神</span>去屈斜路湖、每日250km內、雙夜連住、順路大快朵頤</div>
+    <div class="meta-col"><span class="meta-label">☕ 慢活精神</span>去屈斜路湖與阿寒湖、每日250km內、雙夜連住、順路大快朵頤</div>
   </div>
 </div>
 
@@ -192,11 +189,11 @@ html_content = """<!DOCTYPE html>
     </tr>
     <tr>
       <td class="label-cell">☕ 休息/購物：</td>
-      <td><strong>砂川 Highway Oasis SA</strong>（喝咖啡、吃北菓樓泡芙）；<span class="tag-green">🛍️ Prono 旭川本店</span>（禦寒衣物採買）</td>
+      <td><strong>砂川 Highway Oasis SA</strong>（北菓樓泡芙）；<span class="tag-green">🛍️ Prono 旭川本店</span>（禦寒衣物）</td>
     </tr>
     <tr>
       <td class="label-cell">📍 慢活行程：</td>
-      <td>12:00 取車出發，中途停靠砂川 SA 享用午餐與甜點，至旭川 Prono 採買防寒外套，16:30 抵達 La Vista。</td>
+      <td>12:00 取車，停靠砂川 SA 享用甜點，至旭川 Prono 採買防寒外套，16:30 抵達 La Vista。</td>
     </tr>
     <tr>
       <td class="label-cell">🍽️ 三餐建議：</td>
@@ -375,26 +372,26 @@ html_content = """<!DOCTYPE html>
   <div class="day-header">
     <div class="day-title-cell">
       <span class="day-badge">Day 7</span>
-      <span class="day-date">10/17 (六) 釧路 ➔ 阿寒湖畔 ➔ 帶廣六花亭甜點 ➔ 十勝川溫泉</span>
+      <span class="day-date">10/17 (六) 釧路 ➔ 帶廣豚丼 ➔ 六花亭中札內美術村 ➔ 十勝川溫泉</span>
     </div>
     <div class="day-hotel-cell">🏨 <span class="hotel-tag">十勝川溫泉 豐洲亭 (連住夜 1)</span></div>
   </div>
   <table class="info-table">
     <tr>
       <td class="label-cell">🚗 路線里程：</td>
-      <td>釧路 ➔ 國道 240 ➔ 阿寒湖 ➔ 足寄 ➔ 帶廣 ➔ 十勝川 <span class="tag-blue">(約 180 km / 景觀道路順暢)</span></td>
+      <td>釧路 ➔ 國道 38 號 ➔ 帶廣 ➔ 中札內 ➔ 十勝川 <span class="tag-blue">(約 130 km / 車程僅 2 小時)</span></td>
     </tr>
     <tr>
       <td class="label-cell">💴 ETC過路費：</td>
-      <td><span class="tag-green">【免費】大部分免費</span>（足寄至帶廣段為免費之道東道）</td>
+      <td><span class="tag-green">【免費】全段一般國道（免過路費）</span></td>
     </tr>
     <tr>
       <td class="label-cell">☕ 休息站/驛：</td>
-      <td><strong>道之驛 阿寒丹頂之里</strong>、<strong>道之驛 足寄銀河ホール21</strong></td>
+      <td><strong>道之驛 中札內</strong>、<strong>六花亭 中札內美術村森林咖啡廳</strong></td>
     </tr>
     <tr>
       <td class="label-cell">📍 慢活行程：</td>
-      <td>經阿寒湖畔散步喝咖啡 ➔ 至帶廣市區享用元祖豚丼，至六花亭本店喫茶室享用 3 小時限時酥餅 ➔ 入住頂級植物性溫泉飯店。</td>
+      <td>直奔帶廣享用元祖豚丼 ➔ ☕ <strong>六花亭 中札內美術村</strong>（漫步森林藝廊與享用下午茶，停留 2.5 小時） ➔ 入住十勝川豐洲亭。</td>
     </tr>
     <tr>
       <td class="label-cell">🍽️ 三餐建議：</td>
@@ -408,7 +405,7 @@ html_content = """<!DOCTYPE html>
   <div class="day-header">
     <div class="day-title-cell">
       <span class="day-badge">Day 8</span>
-      <span class="day-date">10/18 (日) 十勝白樺樹大道 ➔ 真鍋庭園 ➔ 美肌溫泉慢活</span>
+      <span class="day-date">10/18 (日) 十勝白樺樹大道 ➔ 六花亭本店 ➔ 真鍋庭園漫活</span>
     </div>
     <div class="day-hotel-cell">🏨 <span class="hotel-tag">十勝川溫泉 豐洲亭 (連住夜 2)</span></div>
   </div>
@@ -427,7 +424,7 @@ html_content = """<!DOCTYPE html>
     </tr>
     <tr>
       <td class="label-cell">📍 慢活行程：</td>
-      <td><strong>十勝牧場白樺並木大道</strong>（下車拍照散步 20 分鐘）➔ <strong>真鍋庭園</strong>（針葉樹紅葉美景）➔ 早早回飯店享受獨家植物性モール溫泉。</td>
+      <td><strong>十勝牧場白樺並木大道</strong>（金黃秋景散步）➔ <strong>六花亭帶廣本店</strong>（享用 3 小時限時酥餅）➔ <strong>真鍋庭園</strong>（針葉樹紅葉）。</td>
     </tr>
     <tr>
       <td class="label-cell">🍽️ 三餐建議：</td>
@@ -541,10 +538,3 @@ html_content = """<!DOCTYPE html>
 
 </body>
 </html>
-"""
-
-with open('Hokkaido_No_Kussharo_Itinerary.html', 'w', encoding='utf-8') as f:
-    f.write(html_content)
-
-HTML('Hokkaido_No_Kussharo_Itinerary.html').write_pdf('Hokkaido_No_Kussharo_Itinerary.pdf')
-print("No Kussharo PDF created successfully! Size:", os.path.getsize('Hokkaido_No_Kussharo_Itinerary.pdf'))
