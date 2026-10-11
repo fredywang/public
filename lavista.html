@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Vista 大雪山 入住指南與設施手冊</title>
+  <style>
+    :root {
+      --primary-color: #244134;
+      --secondary-color: #8b6b3e;
+      --accent-color: #c9933b;
+      --bg-color: #f7f8f9;
+      --card-bg: #ffffff;
+      --text-main: #2d3748;
+      --text-muted: #5a6a7e;
+      --border-color: #e2e8f0;
+      --tag-bg: #edf2f7;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 24px 16px;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1f362b, #2d5442);
+      color: #ffffff;
+      padding: 32px 24px;
+      border-radius: 14px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #d1ded6;
+      font-size: 14px;
+    }
+
+    .section-card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border-color);
+    }
+
+    .section-card h2 {
+      font-size: 20px;
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-card h3 {
+      font-size: 16px;
+      color: var(--secondary-color);
+      margin: 16px 0 10px 0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .info-box {
+      background-color: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+
+    .info-box strong {
+      color: var(--primary-color);
+      display: block;
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+
+    .info-box span {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .badge-highlight {
+      display: inline-block;
+      background-color: #eef7f2;
+      color: #1e633d;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      margin-top: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+      background-color: #f1f5f9;
+      color: var(--primary-color);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    tr:hover {
+      background-color: #fbfcfd;
+    }
+
+    .alert-box {
+      background-color: #fff9f0;
+      border-left: 4px solid var(--accent-color);
+      padding: 12px 16px;
+      border-radius: 4px;
+      margin: 14px 0;
+      font-size: 14px;
+      color: #744210;
+    }
+
+    .caution-box {
+      background-color: #fdf2f2;
+      border-left: 4px solid #e53e3e;
+      padding: 12px 16px;
+      border-radius: 4px;
+      margin-top: 14px;
+      font-size: 14px;
+      color: #9b1c1c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 16px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 12px 8px;
+      }
+      .section-card {
+        padding: 16px;
+      }
+      header {
+        padding: 24px 16px;
+      }
+      th, td {
+        padding: 8px 10px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>La Vista 大雪山 住宿指南與館內手冊</h1>
+      <p>Hotel &amp; Spa Resort LA VISTA Daisetsuzan · 客房與各項設施使用說明</p>
+    </header>
+
+    <!-- 1. 客房與用餐資訊 -->
+    <section class="section-card">
+      <h2>一、 客房與個人入住資訊（Room No. 314）</h2>
+      <div class="info-grid">
+        <div class="info-box">
+          <strong>客房號碼</strong>
+          <span>314 號房[span_0](start_span)[span_0](end_span)</span>
+        </div>
+        <div class="info-box">
+          <strong>退房時間 (Check-out)</strong>
+          <span>上午 11:00 前[span_1](start_span)[span_1](end_span)</span>
+        </div>
+        <div class="info-box">
+          <strong>櫃檯分機 (Front Desk)</strong>
+          <span>撥打客房電話「7」[span_2](start_span)[span_2](end_span)</span>
+        </div>
+        <div class="info-box">
+          <strong>Wi-Fi 網路名稱 (SSID)</strong>
+          <code>DAISETSUZAN</code>[span_3](start_span)[span_3](end_span)
+        </div>
+        <div class="info-box">
+          <strong>Wi-Fi 密碼 (PASS)</strong>
+          <code>kr-daisetsu1126</code>[span_4](start_span)[span_4](end_span)
+        </div>
+      </div>
+
+      <h3>🍽️ 用餐安排</h3>
+      <ul>
+        <li>
+          <strong>晚餐 (Dinner)</strong>：1F「Restaurant nupuri」｜和式會席套餐（Japanese course）｜預約時段：<span class="badge-highlight">17:30（第 1 場次）</span>[span_5](start_span)[span_5](end_span)[span_6](start_span)[span_6](end_span)
+        </li>
+        <li>
+          <strong>早餐 (Breakfast)</strong>：1F「Dining nonno」｜和洋自助餐（Japanese-Western buffet）｜用餐時間：<strong>07:00 – 09:30</strong>（最後入場 09:00）[span_7](start_span)[span_7](end_span)[span_8](start_span)[span_8](end_span)
+        </li>
+      </ul>
+
+      <h3>🛋️ 客房設備與備品說明</h3>
+      <ul>
+        <li><strong>門鎖安全</strong>：客房門<strong>無自動反鎖功能</strong>，離開房間時請務必使用鑰匙手動上鎖[span_9](start_span)[span_9](end_span)。</li>
+        <li><strong>貴重品保險箱</strong>：位於兩床之間；部分房型未設置，貴重物品可寄放至 1 樓櫃檯保管[span_10](start_span)[span_10](end_span)。</li>
+        <li><strong>燈光調節</strong>：玄關白色開關為主電源；床頭附有黑色調光旋鈕（旋轉調亮度、按壓開關）[span_11](start_span)[span_11](end_span)。</li>
+        <li><strong>冬季暖氣</strong>：冬季僅窗邊面板暖氣機（Panel heater）運作，可透過機身上的白色旋鈕調節溫度[span_12](start_span)[span_12](end_span)。</li>
+        <li><strong>備品領取</strong>：房內僅備牙刷；刮鬍刀、梳子等其餘備品可於 1 樓電梯旁備品區或 2 樓大浴場自由取用[span_13](start_span)[span_13](end_span)。</li>
+        <li><strong>館內便服（作務衣）</strong>：房內已備妥標準睡衣，如需其他尺寸請至 1 樓電梯旁更換（成人 S / M / L / LL；兒童 110cm / 130cm）；全館及用餐時段皆可穿著睡衣與室內拖鞋活動[span_14](start_span)[span_14](end_span)。</li>
+      </ul>
+    </section>
+
+    <!-- 2. 免費特色服務時刻表 -->
+    <section class="section-card">
+      <h2>二、 館內免費特色服務與餐飲時刻表</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>服務時段</th>
+              <th>服務項目</th>
+              <th>地點</th>
+              <th>說明與細節</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>全天 24 小時</strong></td>
+              <td>免費研磨咖啡 / 熱可可</td>
+              <td>1F Ikoro 休閒酒吧</td>
+              <td>備有研磨咖啡機，兒童亦可飲用熱可可；設備清掃期間暫停[span_15](start_span)[span_15](end_span)[span_16](start_span)[span_16](end_span)</td>
+            </tr>
+            <tr>
+              <td><strong>14:00 – 翌日 05:00</strong></td>
+              <td>泡湯後免費冰棒</td>
+              <td>2F 大浴場前</td>
+              <td>入浴後可自由享用各式冰棒補充水分[span_17](start_span)[span_17](end_span)[span_18](start_span)[span_18](end_span)[span_19](start_span)[span_19](end_span)</td>
+            </tr>
+            <tr>
+              <td><strong>15:00 – 18:00</strong></td>
+              <td>LUPICIA 奢華茶吧</td>
+              <td>1F Ikoro 休閒酒吧</td>
+              <td>提供超過 10 種精選 LUPICIA 高級茶飲[span_20](start_span)[span_20](end_span)</td>
+            </tr>
+            <tr>
+              <td><strong>15:00 – 22:00</strong></td>
+              <td>當季水果健康醋飲</td>
+              <td>1F 個人湯屋前</td>
+              <td>每日特選水果醋飲，泡湯前後皆可飲用[span_21](start_span)[span_21](end_span)</td>
+            </tr>
+            <tr>
+              <td><strong>18:30 – 19:30</strong></td>
+              <td>傍晚輕食點心</td>
+              <td>1F Ikoro 休閒酒吧</td>
+              <td>供應傍晚精緻輕食小點[span_22](start_span)[span_22](end_span)</td>
+            </tr>
+            <tr>
+              <td><strong>19:00 – 21:00</strong></td>
+              <td>大雪山夜間市集點心</td>
+              <td>1F 櫃檯大廳側</td>
+              <td>提供精選點心與小零食招待[span_23](start_span)[span_23](end_span)</td>
+            </tr>
+            <tr>
+              <td><strong>21:00 – 22:00</strong></td>
+              <td>嚴選紅白酒品酩吧</td>
+              <td>1F Ikoro 休閒酒吧</td>
+              <td>提供飯店嚴選紅白酒小酌[span_24](start_span)[span_24](end_span)</td>
+            </tr>
+            <tr>
+              <td><strong>22:30 – 23:00</strong></td>
+              <td>旭川醬油拉麵（夜鳴きそば）</td>
+              <td>1F Restaurant nupuri</td>
+              <td>免費招待半碗份量之旭川傳統醬油拉麵（宵夜）[span_25](start_span)[span_25](end_span)[span_26](start_span)[span_26](end_span)[span_27](start_span)[span_27](end_span)</td>
+            </tr>
+            <tr>
+              <td><strong>翌日 05:00 – 11:00</strong></td>
+              <td>晨間乳酸菌飲料</td>
+              <td>2F 大浴場前</td>
+              <td>早晨泡湯後免費提供健酪 / 養樂多飲品[span_28](start_span)[span_28](end_span)[span_29](start_span)[span_29](end_span)[span_30](start_span)[span_30](end_span)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3. 溫泉浴場設施 -->
+    <section class="section-card">
+      <h2>三、 溫泉浴場設施指南</h2>
+      
+      <h3>♨️ 2F 大浴場（Public Bath）</h3>
+      <ul>
+        <li><strong>開放時間</strong>：14:00 – 翌日 11:00[span_31](start_span)[span_31](end_span)[span_32](start_span)[span_32](end_span)</li>
+        <li><strong>清掃暫停</strong>：01:00 – 04:00[span_33](start_span)[span_33](end_span)[span_34](start_span)[span_34](end_span)</li>
+        <li><strong>三溫暖桑拿</strong>：01:00 – 05:00 停止運作[span_35](start_span)[span_35](end_span)[span_36](start_span)[span_36](end_span)</li>
+        <li><strong>浴場特色</strong>：露天風呂（Open-Air）、木桶風呂（Barrel）、檜木風呂（Hinoki）[span_37](start_span)[span_37](end_span)</li>
+        <li><strong>重要規範</strong>：浴場不提供毛巾，請自備房內毛巾籃前往；浴場內禁止攜帶手機[span_38](start_span)[span_38](end_span)[span_39](start_span)[span_39](end_span)。</li>
+      </ul>
+
+      <h3>♨️ 1F 個人獨立湯屋「しゅまりの湯」（Private Baths）</h3>
+      <ul>
+        <li><strong>開放時間</strong>：14:00 – 翌日 11:00[span_40](start_span)[span_40](end_span)[span_41](start_span)[span_41](end_span)</li>
+        <li><strong>使用方式</strong>：<strong>無需事前預約</strong>；門口告示顯示為空房時即可入內，進入後請務必從內側反鎖[span_42](start_span)[span_42](end_span)[span_43](start_span)[span_43](end_span)。</li>
+      </ul>
+      <div class="alert-box">
+        <strong>注意事項：</strong>個人湯屋內<strong>無沖洗與淋浴設備</strong>，進入湯池前請務必先在客房或 2 樓大浴場完成沐浴清潔[span_44](start_span)[span_44](end_span)[span_45](start_span)[span_45](end_span)。
+      </div>
+    </section>
+
+    <!-- 4. 各樓層設施與安全須知 -->
+    <section class="section-card">
+      <h2>四、 各樓層設施配置與安全須知</h2>
+      <ul>
+        <li>
+          <strong>1F 大廳櫃檯（Front Desk）</strong>：辦理各項手續；備有御朱印紀念章服務（可將朱印帳交予櫃檯，退房時領回）[span_46](start_span)[span_46](end_span)[span_47](start_span)[span_47](end_span)。
+        </li>
+        <li>
+          <strong>1F Yamazaki 超商（Store）</strong>：24 小時營業；酒類販售時間為 14:00–24:00 及 07:00–11:00（僅限有人工值班之收銀台結帳）[span_48](start_span)[span_48](end_span)[span_49](start_span)[span_49](end_span)。
+        </li>
+        <li>
+          <strong>1F 休憩與桌遊（Lounge &amp; Games）</strong>：Ikoro 休息區備有各式桌遊遊戲供住客同樂[span_50](start_span)[span_50](end_span)[span_51](start_span)[span_51](end_span)。
+        </li>
+        <li>
+          <strong>2F 吸菸室（Smoking Room）</strong>：位於 2 樓電梯斜對面；全館客房與公共區域全面嚴禁吸菸[span_52](start_span)[span_52](end_span)[span_53](start_span)[span_53](end_span)。
+        </li>
+        <li>
+          <strong>2F 製冰機（Ice Machine）</strong>：位於 2 樓電梯旁，可攜帶房內冰桶前往取用[span_54](start_span)[span_54](end_span)。
+        </li>
+        <li>
+          <strong>3F / 4F 自動販賣機（Vending Machine）</strong>：位於電梯旁（僅支援投幣現金）[span_55](start_span)[span_55](end_span)[span_56](start_span)[span_56](end_span)。
+        </li>
+      </ul>
+
+      <div class="caution-box">
+        <strong>⚠️ 安全與防災注意事項：</strong>
+        <ul>
+          <li><strong>落雪危險</strong>：冬季屋頂積雪易滑落造成危險，嚴禁靠近屋頂邊緣或屋簷下方積雪區域[span_57](start_span)[span_57](end_span)。</li>
+          <li><strong>緊急逃生口</strong>：入住時請先行確認走道兩側之緊急逃生出口方向[span_58](start_span)[span_58](end_span)。</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      祝您在 La Vista 大雪山度過愉快舒適的溫泉假期！
+    </footer>
+  </div>
+</body>
+</html>
